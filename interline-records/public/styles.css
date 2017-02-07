@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+body {
+	font-family: 'Slabo 27px', serif;
+}
+
+.site-container {
+	margin: 20px;
+}
+
+.artist-page-logo-container, .side-nav {
+	text-align: right;
+	font-size: 1.3em;
+}
+
+.artist-image-container {
+	height: 50%;
+	width: 50%;
+	overflow: hidden;
+}
+
+.side-nav {
+	padding-top: 0.5em;
+}
+
+
+#artist-page-logo {
+	max-width: 200px;
+}
+
+#main-page {
+	text-align: center;
+}
+
+#main-page #main-logo {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: 80%;
+	padding-bottom: 5%;
+	/*height: 60%;*/
+	opacity: 0.9;
+}
+
+#main-page-background {
+	background: url('/images/new-york-matte.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.artist {
+	list-style: none;
+}
+
+.artist-image {
+	display: none;
+	width: 400px;
+	height: 200px;
+}
+
+.active-image {
+	display: block !important;
+}
+
+@media (max-width: 991px) {
+	.artist-page-logo-container, .side-nav {
+		text-align: center;
+	}
+	#main-page #main-logo {
+		width: 100%;
+	}

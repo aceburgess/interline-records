@@ -1,0 +1,1290 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData react-router
+20 silly mapToRegistry name react-router
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'react-router',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'react-router',
+23 silly mapToRegistry   name: 'react-router',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/react-router
+25 verbose request uri https://registry.npmjs.org/react-router
+26 verbose request no auth needed
+27 info attempt registry request try #1 at 10:49:26 PM
+28 verbose request id 490fc448c60297f6
+29 http request GET https://registry.npmjs.org/react-router
+30 http 200 https://registry.npmjs.org/react-router
+31 verbose headers { server: 'nginx/1.10.1',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'last-modified': 'Sat, 04 Feb 2017 22:03:19 GMT',
+31 verbose headers   etag: 'W/"58964fa7-3a2cc"',
+31 verbose headers   'content-encoding': 'gzip',
+31 verbose headers   'cache-control': 'max-age=300',
+31 verbose headers   'content-length': '19208',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   date: 'Mon, 06 Feb 2017 03:49:26 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   age: '94',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-jfk8127-JFK',
+31 verbose headers   'x-cache': 'HIT',
+31 verbose headers   'x-cache-hits': '1',
+31 verbose headers   'x-timer': 'S1486352966.333846,VS0,VE0',
+31 verbose headers   vary: 'Accept-Encoding' }
+32 silly get cb [ 200,
+32 silly get   { server: 'nginx/1.10.1',
+32 silly get     'content-type': 'application/json',
+32 silly get     'last-modified': 'Sat, 04 Feb 2017 22:03:19 GMT',
+32 silly get     etag: 'W/"58964fa7-3a2cc"',
+32 silly get     'content-encoding': 'gzip',
+32 silly get     'cache-control': 'max-age=300',
+32 silly get     'content-length': '19208',
+32 silly get     'accept-ranges': 'bytes',
+32 silly get     date: 'Mon, 06 Feb 2017 03:49:26 GMT',
+32 silly get     via: '1.1 varnish',
+32 silly get     age: '94',
+32 silly get     connection: 'keep-alive',
+32 silly get     'x-served-by': 'cache-jfk8127-JFK',
+32 silly get     'x-cache': 'HIT',
+32 silly get     'x-cache-hits': '1',
+32 silly get     'x-timer': 'S1486352966.333846,VS0,VE0',
+32 silly get     vary: 'Accept-Encoding' } ]
+33 verbose get saving react-router to /Users/burgeace/.npm/registry.npmjs.org/react-router/.cache.json
+34 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+35 silly resolveWithNewModule react-router@2.8.1 checking installable status
+36 silly cache add args [ 'react-router@^2.6.1', null ]
+37 verbose cache add spec react-router@^2.6.1
+38 silly cache add parsed spec Result {
+38 silly cache add   raw: 'react-router@^2.6.1',
+38 silly cache add   scope: null,
+38 silly cache add   escapedName: 'react-router',
+38 silly cache add   name: 'react-router',
+38 silly cache add   rawSpec: '^2.6.1',
+38 silly cache add   spec: '>=2.6.1 <3.0.0',
+38 silly cache add   type: 'range' }
+39 silly addNamed react-router@>=2.6.1 <3.0.0
+40 verbose addNamed ">=2.6.1 <3.0.0" is a valid semver range for react-router
+41 silly addNameRange { name: 'react-router', range: '>=2.6.1 <3.0.0', hasData: false }
+42 silly mapToRegistry name react-router
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry https://registry.npmjs.org/
+45 silly mapToRegistry data Result {
+45 silly mapToRegistry   raw: 'react-router',
+45 silly mapToRegistry   scope: null,
+45 silly mapToRegistry   escapedName: 'react-router',
+45 silly mapToRegistry   name: 'react-router',
+45 silly mapToRegistry   rawSpec: '',
+45 silly mapToRegistry   spec: 'latest',
+45 silly mapToRegistry   type: 'tag' }
+46 silly mapToRegistry uri https://registry.npmjs.org/react-router
+47 verbose addNameRange registry:https://registry.npmjs.org/react-router not in flight; fetching
+48 verbose get https://registry.npmjs.org/react-router not expired, no request
+49 silly addNameRange number 2 { name: 'react-router', range: '>=2.6.1 <3.0.0', hasData: true }
+50 silly addNameRange versions [ 'react-router',
+50 silly addNameRange   [ '0.0.0',
+50 silly addNameRange     '0.0.1',
+50 silly addNameRange     '0.4.0',
+50 silly addNameRange     '0.4.1',
+50 silly addNameRange     '0.4.2',
+50 silly addNameRange     '0.5.0',
+50 silly addNameRange     '0.5.1',
+50 silly addNameRange     '0.5.2',
+50 silly addNameRange     '0.5.3',
+50 silly addNameRange     '0.6.0',
+50 silly addNameRange     '0.6.1',
+50 silly addNameRange     '0.7.0',
+50 silly addNameRange     '0.8.0',
+50 silly addNameRange     '0.9.0',
+50 silly addNameRange     '0.9.1',
+50 silly addNameRange     '0.9.2',
+50 silly addNameRange     '0.9.3',
+50 silly addNameRange     '0.9.4',
+50 silly addNameRange     '0.9.5',
+50 silly addNameRange     '0.10.0',
+50 silly addNameRange     '0.10.1',
+50 silly addNameRange     '0.10.2',
+50 silly addNameRange     '0.11.0',
+50 silly addNameRange     '0.11.1',
+50 silly addNameRange     '0.11.2',
+50 silly addNameRange     '0.11.3',
+50 silly addNameRange     '0.11.4',
+50 silly addNameRange     '0.11.5',
+50 silly addNameRange     '0.11.6',
+50 silly addNameRange     '0.12.0',
+50 silly addNameRange     '0.12.1',
+50 silly addNameRange     '0.12.2',
+50 silly addNameRange     '0.12.3',
+50 silly addNameRange     '0.12.4',
+50 silly addNameRange     '0.13.0',
+50 silly addNameRange     '0.13.1',
+50 silly addNameRange     '0.13.2',
+50 silly addNameRange     '0.13.3',
+50 silly addNameRange     '1.0.0-alpha1',
+50 silly addNameRange     '1.0.0-alpha2',
+50 silly addNameRange     '1.0.0-beta1',
+50 silly addNameRange     '1.0.0-beta2',
+50 silly addNameRange     '1.0.0-beta3',
+50 silly addNameRange     '1.0.0-beta4',
+50 silly addNameRange     '1.0.0-rc1',
+50 silly addNameRange     '0.13.4',
+50 silly addNameRange     '1.0.0-rc2',
+50 silly addNameRange     '1.0.0-rc3',
+50 silly addNameRange     '0.13.5',
+50 silly addNameRange     '1.0.0-rc4',
+50 silly addNameRange     '1.0.0',
+50 silly addNameRange     '1.0.1',
+50 silly addNameRange     '1.0.2',
+50 silly addNameRange     '1.0.3',
+50 silly addNameRange     '2.0.0-rc1',
+50 silly addNameRange     '2.0.0-rc2',
+50 silly addNameRange     '2.0.0-rc3',
+50 silly addNameRange     '2.0.0-rc4',
+50 silly addNameRange     '2.0.0-rc5',
+50 silly addNameRange     '2.0.0-rc6',
+50 silly addNameRange     '2.0.0',
+50 silly addNameRange     '2.0.1',
+50 silly addNameRange     '2.1.0',
+50 silly addNameRange     '2.1.1',
+50 silly addNameRange     '2.2.0',
+50 silly addNameRange     '2.2.1',
+50 silly addNameRange     '2.2.2',
+50 silly addNameRange     '2.2.4',
+50 silly addNameRange     '2.3.0',
+50 silly addNameRange     '2.4.0',
+50 silly addNameRange     '2.4.1',
+50 silly addNameRange     '3.0.0-alpha.1',
+50 silly addNameRange     '2.5.0',
+50 silly addNameRange     '2.5.1',
+50 silly addNameRange     '2.5.2',
+50 silly addNameRange     '0.13.6',
+50 silly addNameRange     '2.6.0',
+50 silly addNameRange     '3.0.0-alpha.2',
+50 silly addNameRange     '2.6.1',
+50 silly addNameRange     '3.0.0-alpha.3',
+50 silly addNameRange     '2.7.0',
+50 silly addNameRange     '2.8.0',
+50 silly addNameRange     '4.0.0-0',
+50 silly addNameRange     '4.0.0-1',
+50 silly addNameRange     '4.0.0-2',
+50 silly addNameRange     '2.8.1',
+50 silly addNameRange     '3.0.0-beta.1',
+50 silly addNameRange     '4.0.0-alpha.3',
+50 silly addNameRange     '4.0.0-alpha.4',
+50 silly addNameRange     '4.0.0-alpha.5',
+50 silly addNameRange     '3.0.0',
+50 silly addNameRange     '4.0.0-alpha.6',
+50 silly addNameRange     '3.0.1',
+50 silly addNameRange     '3.0.2',
+50 silly addNameRange     '4.0.0-beta.1',
+50 silly addNameRange     '4.0.0-beta.2',
+50 silly addNameRange     '4.0.0-beta.3',
+50 silly addNameRange     '4.0.0-beta.4' ] ]
+51 silly addNamed react-router@2.8.1
+52 verbose addNamed "2.8.1" is a plain semver version for react-router
+53 silly mapToRegistry name react-router
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'react-router',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   escapedName: 'react-router',
+56 silly mapToRegistry   name: 'react-router',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/react-router
+58 verbose addRemoteTarball https://registry.npmjs.org/react-router/-/react-router-2.8.1.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-router/-/react-router-2.8.1.tgz',
+59 verbose addRemoteTarball   '73e9491f6ceb316d0f779829081863e378ee4ed7' ]
+60 info retry fetch attempt 1 at 10:49:26 PM
+61 info attempt registry request try #1 at 10:49:26 PM
+62 http fetch GET https://registry.npmjs.org/react-router/-/react-router-2.8.1.tgz
+63 http fetch 200 https://registry.npmjs.org/react-router/-/react-router-2.8.1.tgz
+64 silly fetchAndShaCheck shasum 73e9491f6ceb316d0f779829081863e378ee4ed7
+65 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/react-router/-/react-router-2.8.1.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for react-router@2.8.1
+67 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+68 silly cache afterAdd react-router@2.8.1
+69 verbose afterAdd /Users/burgeace/.npm/react-router/2.8.1/package/package.json not in flight; writing
+70 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+71 verbose afterAdd /Users/burgeace/.npm/react-router/2.8.1/package/package.json written
+72 silly fetchNamedPackageData history
+73 silly mapToRegistry name history
+74 silly mapToRegistry using default registry
+75 silly mapToRegistry registry https://registry.npmjs.org/
+76 silly mapToRegistry data Result {
+76 silly mapToRegistry   raw: 'history',
+76 silly mapToRegistry   scope: null,
+76 silly mapToRegistry   escapedName: 'history',
+76 silly mapToRegistry   name: 'history',
+76 silly mapToRegistry   rawSpec: '',
+76 silly mapToRegistry   spec: 'latest',
+76 silly mapToRegistry   type: 'tag' }
+77 silly mapToRegistry uri https://registry.npmjs.org/history
+78 silly fetchNamedPackageData hoist-non-react-statics
+79 silly mapToRegistry name hoist-non-react-statics
+80 silly mapToRegistry using default registry
+81 silly mapToRegistry registry https://registry.npmjs.org/
+82 silly mapToRegistry data Result {
+82 silly mapToRegistry   raw: 'hoist-non-react-statics',
+82 silly mapToRegistry   scope: null,
+82 silly mapToRegistry   escapedName: 'hoist-non-react-statics',
+82 silly mapToRegistry   name: 'hoist-non-react-statics',
+82 silly mapToRegistry   rawSpec: '',
+82 silly mapToRegistry   spec: 'latest',
+82 silly mapToRegistry   type: 'tag' }
+83 silly mapToRegistry uri https://registry.npmjs.org/hoist-non-react-statics
+84 silly fetchNamedPackageData warning
+85 silly mapToRegistry name warning
+86 silly mapToRegistry using default registry
+87 silly mapToRegistry registry https://registry.npmjs.org/
+88 silly mapToRegistry data Result {
+88 silly mapToRegistry   raw: 'warning',
+88 silly mapToRegistry   scope: null,
+88 silly mapToRegistry   escapedName: 'warning',
+88 silly mapToRegistry   name: 'warning',
+88 silly mapToRegistry   rawSpec: '',
+88 silly mapToRegistry   spec: 'latest',
+88 silly mapToRegistry   type: 'tag' }
+89 silly mapToRegistry uri https://registry.npmjs.org/warning
+90 verbose request uri https://registry.npmjs.org/history
+91 verbose request no auth needed
+92 info attempt registry request try #1 at 10:49:26 PM
+93 http request GET https://registry.npmjs.org/history
+94 verbose request uri https://registry.npmjs.org/hoist-non-react-statics
+95 verbose request no auth needed
+96 info attempt registry request try #1 at 10:49:26 PM
+97 http request GET https://registry.npmjs.org/hoist-non-react-statics
+98 verbose request uri https://registry.npmjs.org/warning
+99 verbose request no auth needed
+100 info attempt registry request try #1 at 10:49:26 PM
+101 http request GET https://registry.npmjs.org/warning
+102 http 200 https://registry.npmjs.org/history
+103 verbose headers { server: 'nginx/1.10.1',
+103 verbose headers   'content-type': 'application/json',
+103 verbose headers   'last-modified': 'Fri, 03 Feb 2017 16:30:01 GMT',
+103 verbose headers   etag: 'W/"5894b009-28005"',
+103 verbose headers   'content-encoding': 'gzip',
+103 verbose headers   'cache-control': 'max-age=300',
+103 verbose headers   'content-length': '14544',
+103 verbose headers   'accept-ranges': 'bytes',
+103 verbose headers   date: 'Mon, 06 Feb 2017 03:49:26 GMT',
+103 verbose headers   via: '1.1 varnish',
+103 verbose headers   age: '43',
+103 verbose headers   connection: 'keep-alive',
+103 verbose headers   'x-served-by': 'cache-jfk8127-JFK',
+103 verbose headers   'x-cache': 'HIT',
+103 verbose headers   'x-cache-hits': '1',
+103 verbose headers   'x-timer': 'S1486352966.885992,VS0,VE0',
+103 verbose headers   vary: 'Accept-Encoding' }
+104 silly get cb [ 200,
+104 silly get   { server: 'nginx/1.10.1',
+104 silly get     'content-type': 'application/json',
+104 silly get     'last-modified': 'Fri, 03 Feb 2017 16:30:01 GMT',
+104 silly get     etag: 'W/"5894b009-28005"',
+104 silly get     'content-encoding': 'gzip',
+104 silly get     'cache-control': 'max-age=300',
+104 silly get     'content-length': '14544',
+104 silly get     'accept-ranges': 'bytes',
+104 silly get     date: 'Mon, 06 Feb 2017 03:49:26 GMT',
+104 silly get     via: '1.1 varnish',
+104 silly get     age: '43',
+104 silly get     connection: 'keep-alive',
+104 silly get     'x-served-by': 'cache-jfk8127-JFK',
+104 silly get     'x-cache': 'HIT',
+104 silly get     'x-cache-hits': '1',
+104 silly get     'x-timer': 'S1486352966.885992,VS0,VE0',
+104 silly get     vary: 'Accept-Encoding' } ]
+105 verbose get saving history to /Users/burgeace/.npm/registry.npmjs.org/history/.cache.json
+106 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+107 silly resolveWithNewModule history@2.1.2 checking installable status
+108 silly cache add args [ 'history@^2.1.2', null ]
+109 verbose cache add spec history@^2.1.2
+110 silly cache add parsed spec Result {
+110 silly cache add   raw: 'history@^2.1.2',
+110 silly cache add   scope: null,
+110 silly cache add   escapedName: 'history',
+110 silly cache add   name: 'history',
+110 silly cache add   rawSpec: '^2.1.2',
+110 silly cache add   spec: '>=2.1.2 <3.0.0',
+110 silly cache add   type: 'range' }
+111 silly addNamed history@>=2.1.2 <3.0.0
+112 verbose addNamed ">=2.1.2 <3.0.0" is a valid semver range for history
+113 silly addNameRange { name: 'history', range: '>=2.1.2 <3.0.0', hasData: false }
+114 silly mapToRegistry name history
+115 silly mapToRegistry using default registry
+116 silly mapToRegistry registry https://registry.npmjs.org/
+117 silly mapToRegistry data Result {
+117 silly mapToRegistry   raw: 'history',
+117 silly mapToRegistry   scope: null,
+117 silly mapToRegistry   escapedName: 'history',
+117 silly mapToRegistry   name: 'history',
+117 silly mapToRegistry   rawSpec: '',
+117 silly mapToRegistry   spec: 'latest',
+117 silly mapToRegistry   type: 'tag' }
+118 silly mapToRegistry uri https://registry.npmjs.org/history
+119 verbose addNameRange registry:https://registry.npmjs.org/history not in flight; fetching
+120 verbose get https://registry.npmjs.org/history not expired, no request
+121 silly addNameRange number 2 { name: 'history', range: '>=2.1.2 <3.0.0', hasData: true }
+122 silly addNameRange versions [ 'history',
+122 silly addNameRange   [ '0.1.0',
+122 silly addNameRange     '1.0.0',
+122 silly addNameRange     '1.1.0',
+122 silly addNameRange     '1.2.0',
+122 silly addNameRange     '1.2.1',
+122 silly addNameRange     '1.2.2',
+122 silly addNameRange     '1.3.0',
+122 silly addNameRange     '1.3.1',
+122 silly addNameRange     '1.3.2',
+122 silly addNameRange     '1.3.3',
+122 silly addNameRange     '1.4.0',
+122 silly addNameRange     '1.4.1',
+122 silly addNameRange     '1.5.0',
+122 silly addNameRange     '1.6.0',
+122 silly addNameRange     '1.7.0',
+122 silly addNameRange     '1.8.0',
+122 silly addNameRange     '1.8.1',
+122 silly addNameRange     '1.8.2',
+122 silly addNameRange     '1.8.3',
+122 silly addNameRange     '1.8.4',
+122 silly addNameRange     '1.8.5',
+122 silly addNameRange     '1.9.0',
+122 silly addNameRange     '1.9.1',
+122 silly addNameRange     '1.10.0',
+122 silly addNameRange     '1.10.1',
+122 silly addNameRange     '1.10.2',
+122 silly addNameRange     '1.11.0',
+122 silly addNameRange     '1.11.1',
+122 silly addNameRange     '1.12.0',
+122 silly addNameRange     '1.12.1',
+122 silly addNameRange     '1.12.2',
+122 silly addNameRange     '1.12.3',
+122 silly addNameRange     '1.12.4',
+122 silly addNameRange     '1.12.5',
+122 silly addNameRange     '1.12.6',
+122 silly addNameRange     '1.13.0',
+122 silly addNameRange     '1.13.1',
+122 silly addNameRange     '1.14.0',
+122 silly addNameRange     '1.15.0',
+122 silly addNameRange     '1.16.0',
+122 silly addNameRange     '1.17.0',
+122 silly addNameRange     '2.0.0-rc1',
+122 silly addNameRange     '2.0.0-rc2',
+122 silly addNameRange     '2.0.0-rc3',
+122 silly addNameRange     '2.0.0',
+122 silly addNameRange     '2.0.1',
+122 silly addNameRange     '3.0.0-0',
+122 silly addNameRange     '2.0.2',
+122 silly addNameRange     '2.1.0',
+122 silly addNameRange     '3.0.0-1',
+122 silly addNameRange     '3.0.0-2',
+122 silly addNameRange     '2.1.1',
+122 silly addNameRange     '2.1.2',
+122 silly addNameRange     '3.0.0',
+122 silly addNameRange     '3.1.0',
+122 silly addNameRange     '3.2.0',
+122 silly addNameRange     '3.2.1',
+122 silly addNameRange     '4.0.0-0',
+122 silly addNameRange     '4.0.0-1',
+122 silly addNameRange     '4.0.0-2',
+122 silly addNameRange     '4.0.0',
+122 silly addNameRange     '4.0.1',
+122 silly addNameRange     '4.1.0',
+122 silly addNameRange     '4.2.0',
+122 silly addNameRange     '4.2.1',
+122 silly addNameRange     '4.3.0',
+122 silly addNameRange     '4.4.0',
+122 silly addNameRange     '4.4.1',
+122 silly addNameRange     '4.5.0',
+122 silly addNameRange     '4.5.1' ] ]
+123 silly addNamed history@2.1.2
+124 verbose addNamed "2.1.2" is a plain semver version for history
+125 silly mapToRegistry name history
+126 silly mapToRegistry using default registry
+127 silly mapToRegistry registry https://registry.npmjs.org/
+128 silly mapToRegistry data Result {
+128 silly mapToRegistry   raw: 'history',
+128 silly mapToRegistry   scope: null,
+128 silly mapToRegistry   escapedName: 'history',
+128 silly mapToRegistry   name: 'history',
+128 silly mapToRegistry   rawSpec: '',
+128 silly mapToRegistry   spec: 'latest',
+128 silly mapToRegistry   type: 'tag' }
+129 silly mapToRegistry uri https://registry.npmjs.org/history
+130 verbose addRemoteTarball https://registry.npmjs.org/history/-/history-2.1.2.tgz not in flight; adding
+131 verbose addRemoteTarball [ 'https://registry.npmjs.org/history/-/history-2.1.2.tgz',
+131 verbose addRemoteTarball   '4aa2de897a0e4867e4539843be6ecdb2986bfdec' ]
+132 info retry fetch attempt 1 at 10:49:26 PM
+133 info attempt registry request try #1 at 10:49:26 PM
+134 http fetch GET https://registry.npmjs.org/history/-/history-2.1.2.tgz
+135 http 200 https://registry.npmjs.org/hoist-non-react-statics
+136 verbose headers { server: 'nginx/1.10.1',
+136 verbose headers   'content-type': 'application/json',
+136 verbose headers   'last-modified': 'Sat, 22 Oct 2016 04:55:29 GMT',
+136 verbose headers   etag: 'W/"580af141-46fa"',
+136 verbose headers   'content-encoding': 'gzip',
+136 verbose headers   'cache-control': 'max-age=300',
+136 verbose headers   'content-length': '2542',
+136 verbose headers   'accept-ranges': 'bytes',
+136 verbose headers   date: 'Mon, 06 Feb 2017 03:49:26 GMT',
+136 verbose headers   via: '1.1 varnish',
+136 verbose headers   age: '43',
+136 verbose headers   connection: 'keep-alive',
+136 verbose headers   'x-served-by': 'cache-jfk8132-JFK',
+136 verbose headers   'x-cache': 'HIT',
+136 verbose headers   'x-cache-hits': '1',
+136 verbose headers   'x-timer': 'S1486352966.955986,VS0,VE0',
+136 verbose headers   vary: 'Accept-Encoding' }
+137 silly get cb [ 200,
+137 silly get   { server: 'nginx/1.10.1',
+137 silly get     'content-type': 'application/json',
+137 silly get     'last-modified': 'Sat, 22 Oct 2016 04:55:29 GMT',
+137 silly get     etag: 'W/"580af141-46fa"',
+137 silly get     'content-encoding': 'gzip',
+137 silly get     'cache-control': 'max-age=300',
+137 silly get     'content-length': '2542',
+137 silly get     'accept-ranges': 'bytes',
+137 silly get     date: 'Mon, 06 Feb 2017 03:49:26 GMT',
+137 silly get     via: '1.1 varnish',
+137 silly get     age: '43',
+137 silly get     connection: 'keep-alive',
+137 silly get     'x-served-by': 'cache-jfk8132-JFK',
+137 silly get     'x-cache': 'HIT',
+137 silly get     'x-cache-hits': '1',
+137 silly get     'x-timer': 'S1486352966.955986,VS0,VE0',
+137 silly get     vary: 'Accept-Encoding' } ]
+138 verbose get saving hoist-non-react-statics to /Users/burgeace/.npm/registry.npmjs.org/hoist-non-react-statics/.cache.json
+139 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+140 silly resolveWithNewModule hoist-non-react-statics@1.2.0 checking installable status
+141 silly cache add args [ 'hoist-non-react-statics@^1.2.0', null ]
+142 verbose cache add spec hoist-non-react-statics@^1.2.0
+143 silly cache add parsed spec Result {
+143 silly cache add   raw: 'hoist-non-react-statics@^1.2.0',
+143 silly cache add   scope: null,
+143 silly cache add   escapedName: 'hoist-non-react-statics',
+143 silly cache add   name: 'hoist-non-react-statics',
+143 silly cache add   rawSpec: '^1.2.0',
+143 silly cache add   spec: '>=1.2.0 <2.0.0',
+143 silly cache add   type: 'range' }
+144 silly addNamed hoist-non-react-statics@>=1.2.0 <2.0.0
+145 verbose addNamed ">=1.2.0 <2.0.0" is a valid semver range for hoist-non-react-statics
+146 silly addNameRange { name: 'hoist-non-react-statics',
+146 silly addNameRange   range: '>=1.2.0 <2.0.0',
+146 silly addNameRange   hasData: false }
+147 silly mapToRegistry name hoist-non-react-statics
+148 silly mapToRegistry using default registry
+149 silly mapToRegistry registry https://registry.npmjs.org/
+150 silly mapToRegistry data Result {
+150 silly mapToRegistry   raw: 'hoist-non-react-statics',
+150 silly mapToRegistry   scope: null,
+150 silly mapToRegistry   escapedName: 'hoist-non-react-statics',
+150 silly mapToRegistry   name: 'hoist-non-react-statics',
+150 silly mapToRegistry   rawSpec: '',
+150 silly mapToRegistry   spec: 'latest',
+150 silly mapToRegistry   type: 'tag' }
+151 silly mapToRegistry uri https://registry.npmjs.org/hoist-non-react-statics
+152 verbose addNameRange registry:https://registry.npmjs.org/hoist-non-react-statics not in flight; fetching
+153 verbose get https://registry.npmjs.org/hoist-non-react-statics not expired, no request
+154 silly addNameRange number 2 { name: 'hoist-non-react-statics',
+154 silly addNameRange   range: '>=1.2.0 <2.0.0',
+154 silly addNameRange   hasData: true }
+155 silly addNameRange versions [ 'hoist-non-react-statics',
+155 silly addNameRange   [ '1.0.0',
+155 silly addNameRange     '1.0.1',
+155 silly addNameRange     '1.0.2',
+155 silly addNameRange     '1.0.3',
+155 silly addNameRange     '1.0.4',
+155 silly addNameRange     '1.0.5',
+155 silly addNameRange     '1.0.6',
+155 silly addNameRange     '1.1.0',
+155 silly addNameRange     '1.2.0' ] ]
+156 silly addNamed hoist-non-react-statics@1.2.0
+157 verbose addNamed "1.2.0" is a plain semver version for hoist-non-react-statics
+158 silly mapToRegistry name hoist-non-react-statics
+159 silly mapToRegistry using default registry
+160 silly mapToRegistry registry https://registry.npmjs.org/
+161 silly mapToRegistry data Result {
+161 silly mapToRegistry   raw: 'hoist-non-react-statics',
+161 silly mapToRegistry   scope: null,
+161 silly mapToRegistry   escapedName: 'hoist-non-react-statics',
+161 silly mapToRegistry   name: 'hoist-non-react-statics',
+161 silly mapToRegistry   rawSpec: '',
+161 silly mapToRegistry   spec: 'latest',
+161 silly mapToRegistry   type: 'tag' }
+162 silly mapToRegistry uri https://registry.npmjs.org/hoist-non-react-statics
+163 verbose addRemoteTarball https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz not in flight; adding
+164 verbose addRemoteTarball [ 'https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz',
+164 verbose addRemoteTarball   'aa448cf0986d55cc40773b17174b7dd066cb7cfb' ]
+165 info retry fetch attempt 1 at 10:49:27 PM
+166 info attempt registry request try #1 at 10:49:27 PM
+167 http fetch GET https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz
+168 http fetch 200 https://registry.npmjs.org/history/-/history-2.1.2.tgz
+169 http 200 https://registry.npmjs.org/warning
+170 verbose headers { server: 'nginx/1.10.1',
+170 verbose headers   'content-type': 'application/json',
+170 verbose headers   'last-modified': 'Mon, 17 Oct 2016 14:49:53 GMT',
+170 verbose headers   etag: 'W/"5804e511-2416"',
+170 verbose headers   'content-encoding': 'gzip',
+170 verbose headers   'cache-control': 'max-age=300',
+170 verbose headers   'content-length': '2210',
+170 verbose headers   'accept-ranges': 'bytes',
+170 verbose headers   date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+170 verbose headers   via: '1.1 varnish',
+170 verbose headers   age: '88',
+170 verbose headers   connection: 'keep-alive',
+170 verbose headers   'x-served-by': 'cache-jfk8123-JFK',
+170 verbose headers   'x-cache': 'HIT',
+170 verbose headers   'x-cache-hits': '1',
+170 verbose headers   'x-timer': 'S1486352967.043763,VS0,VE0',
+170 verbose headers   vary: 'Accept-Encoding' }
+171 silly get cb [ 200,
+171 silly get   { server: 'nginx/1.10.1',
+171 silly get     'content-type': 'application/json',
+171 silly get     'last-modified': 'Mon, 17 Oct 2016 14:49:53 GMT',
+171 silly get     etag: 'W/"5804e511-2416"',
+171 silly get     'content-encoding': 'gzip',
+171 silly get     'cache-control': 'max-age=300',
+171 silly get     'content-length': '2210',
+171 silly get     'accept-ranges': 'bytes',
+171 silly get     date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+171 silly get     via: '1.1 varnish',
+171 silly get     age: '88',
+171 silly get     connection: 'keep-alive',
+171 silly get     'x-served-by': 'cache-jfk8123-JFK',
+171 silly get     'x-cache': 'HIT',
+171 silly get     'x-cache-hits': '1',
+171 silly get     'x-timer': 'S1486352967.043763,VS0,VE0',
+171 silly get     vary: 'Accept-Encoding' } ]
+172 verbose get saving warning to /Users/burgeace/.npm/registry.npmjs.org/warning/.cache.json
+173 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+174 silly fetchAndShaCheck shasum 4aa2de897a0e4867e4539843be6ecdb2986bfdec
+175 silly resolveWithNewModule warning@3.0.0 checking installable status
+176 silly cache add args [ 'warning@^3.0.0', null ]
+177 verbose cache add spec warning@^3.0.0
+178 silly cache add parsed spec Result {
+178 silly cache add   raw: 'warning@^3.0.0',
+178 silly cache add   scope: null,
+178 silly cache add   escapedName: 'warning',
+178 silly cache add   name: 'warning',
+178 silly cache add   rawSpec: '^3.0.0',
+178 silly cache add   spec: '>=3.0.0 <4.0.0',
+178 silly cache add   type: 'range' }
+179 silly addNamed warning@>=3.0.0 <4.0.0
+180 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for warning
+181 silly addNameRange { name: 'warning', range: '>=3.0.0 <4.0.0', hasData: false }
+182 silly mapToRegistry name warning
+183 silly mapToRegistry using default registry
+184 silly mapToRegistry registry https://registry.npmjs.org/
+185 silly mapToRegistry data Result {
+185 silly mapToRegistry   raw: 'warning',
+185 silly mapToRegistry   scope: null,
+185 silly mapToRegistry   escapedName: 'warning',
+185 silly mapToRegistry   name: 'warning',
+185 silly mapToRegistry   rawSpec: '',
+185 silly mapToRegistry   spec: 'latest',
+185 silly mapToRegistry   type: 'tag' }
+186 silly mapToRegistry uri https://registry.npmjs.org/warning
+187 verbose addNameRange registry:https://registry.npmjs.org/warning not in flight; fetching
+188 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/history/-/history-2.1.2.tgz not in flight; adding
+189 verbose addTmpTarball already have metadata; skipping unpack for history@2.1.2
+190 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+191 verbose get https://registry.npmjs.org/warning not expired, no request
+192 silly addNameRange number 2 { name: 'warning', range: '>=3.0.0 <4.0.0', hasData: true }
+193 silly addNameRange versions [ 'warning',
+193 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '2.0.0', '2.1.0', '3.0.0' ] ]
+194 silly addNamed warning@3.0.0
+195 verbose addNamed "3.0.0" is a plain semver version for warning
+196 silly mapToRegistry name warning
+197 silly mapToRegistry using default registry
+198 silly mapToRegistry registry https://registry.npmjs.org/
+199 silly mapToRegistry data Result {
+199 silly mapToRegistry   raw: 'warning',
+199 silly mapToRegistry   scope: null,
+199 silly mapToRegistry   escapedName: 'warning',
+199 silly mapToRegistry   name: 'warning',
+199 silly mapToRegistry   rawSpec: '',
+199 silly mapToRegistry   spec: 'latest',
+199 silly mapToRegistry   type: 'tag' }
+200 silly mapToRegistry uri https://registry.npmjs.org/warning
+201 verbose addRemoteTarball https://registry.npmjs.org/warning/-/warning-3.0.0.tgz not in flight; adding
+202 verbose addRemoteTarball [ 'https://registry.npmjs.org/warning/-/warning-3.0.0.tgz',
+202 verbose addRemoteTarball   '32e5377cb572de4ab04753bdf8821c01ed605b7c' ]
+203 info retry fetch attempt 1 at 10:49:27 PM
+204 info attempt registry request try #1 at 10:49:27 PM
+205 http fetch GET https://registry.npmjs.org/warning/-/warning-3.0.0.tgz
+206 silly cache afterAdd history@2.1.2
+207 verbose afterAdd /Users/burgeace/.npm/history/2.1.2/package/package.json not in flight; writing
+208 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+209 verbose afterAdd /Users/burgeace/.npm/history/2.1.2/package/package.json written
+210 http fetch 200 https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz
+211 silly fetchAndShaCheck shasum aa448cf0986d55cc40773b17174b7dd066cb7cfb
+212 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz not in flight; adding
+213 verbose addTmpTarball already have metadata; skipping unpack for hoist-non-react-statics@1.2.0
+214 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+215 silly cache afterAdd hoist-non-react-statics@1.2.0
+216 verbose afterAdd /Users/burgeace/.npm/hoist-non-react-statics/1.2.0/package/package.json not in flight; writing
+217 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+218 verbose afterAdd /Users/burgeace/.npm/hoist-non-react-statics/1.2.0/package/package.json written
+219 http fetch 200 https://registry.npmjs.org/warning/-/warning-3.0.0.tgz
+220 silly fetchAndShaCheck shasum 32e5377cb572de4ab04753bdf8821c01ed605b7c
+221 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/warning/-/warning-3.0.0.tgz not in flight; adding
+222 verbose addTmpTarball already have metadata; skipping unpack for warning@3.0.0
+223 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+224 silly cache afterAdd warning@3.0.0
+225 verbose afterAdd /Users/burgeace/.npm/warning/3.0.0/package/package.json not in flight; writing
+226 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+227 verbose afterAdd /Users/burgeace/.npm/warning/3.0.0/package/package.json written
+228 silly fetchNamedPackageData deep-equal
+229 silly mapToRegistry name deep-equal
+230 silly mapToRegistry using default registry
+231 silly mapToRegistry registry https://registry.npmjs.org/
+232 silly mapToRegistry data Result {
+232 silly mapToRegistry   raw: 'deep-equal',
+232 silly mapToRegistry   scope: null,
+232 silly mapToRegistry   escapedName: 'deep-equal',
+232 silly mapToRegistry   name: 'deep-equal',
+232 silly mapToRegistry   rawSpec: '',
+232 silly mapToRegistry   spec: 'latest',
+232 silly mapToRegistry   type: 'tag' }
+233 silly mapToRegistry uri https://registry.npmjs.org/deep-equal
+234 silly fetchNamedPackageData query-string
+235 silly mapToRegistry name query-string
+236 silly mapToRegistry using default registry
+237 silly mapToRegistry registry https://registry.npmjs.org/
+238 silly mapToRegistry data Result {
+238 silly mapToRegistry   raw: 'query-string',
+238 silly mapToRegistry   scope: null,
+238 silly mapToRegistry   escapedName: 'query-string',
+238 silly mapToRegistry   name: 'query-string',
+238 silly mapToRegistry   rawSpec: '',
+238 silly mapToRegistry   spec: 'latest',
+238 silly mapToRegistry   type: 'tag' }
+239 silly mapToRegistry uri https://registry.npmjs.org/query-string
+240 silly fetchNamedPackageData warning
+241 silly mapToRegistry name warning
+242 silly mapToRegistry using default registry
+243 silly mapToRegistry registry https://registry.npmjs.org/
+244 silly mapToRegistry data Result {
+244 silly mapToRegistry   raw: 'warning',
+244 silly mapToRegistry   scope: null,
+244 silly mapToRegistry   escapedName: 'warning',
+244 silly mapToRegistry   name: 'warning',
+244 silly mapToRegistry   rawSpec: '',
+244 silly mapToRegistry   spec: 'latest',
+244 silly mapToRegistry   type: 'tag' }
+245 silly mapToRegistry uri https://registry.npmjs.org/warning
+246 silly resolveWithNewModule warning@2.1.0 checking installable status
+247 silly cache add args [ 'warning@^2.0.0', null ]
+248 verbose cache add spec warning@^2.0.0
+249 silly cache add parsed spec Result {
+249 silly cache add   raw: 'warning@^2.0.0',
+249 silly cache add   scope: null,
+249 silly cache add   escapedName: 'warning',
+249 silly cache add   name: 'warning',
+249 silly cache add   rawSpec: '^2.0.0',
+249 silly cache add   spec: '>=2.0.0 <3.0.0',
+249 silly cache add   type: 'range' }
+250 silly addNamed warning@>=2.0.0 <3.0.0
+251 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for warning
+252 silly addNameRange { name: 'warning', range: '>=2.0.0 <3.0.0', hasData: false }
+253 silly mapToRegistry name warning
+254 silly mapToRegistry using default registry
+255 silly mapToRegistry registry https://registry.npmjs.org/
+256 silly mapToRegistry data Result {
+256 silly mapToRegistry   raw: 'warning',
+256 silly mapToRegistry   scope: null,
+256 silly mapToRegistry   escapedName: 'warning',
+256 silly mapToRegistry   name: 'warning',
+256 silly mapToRegistry   rawSpec: '',
+256 silly mapToRegistry   spec: 'latest',
+256 silly mapToRegistry   type: 'tag' }
+257 silly mapToRegistry uri https://registry.npmjs.org/warning
+258 verbose addNameRange registry:https://registry.npmjs.org/warning not in flight; fetching
+259 verbose request uri https://registry.npmjs.org/deep-equal
+260 verbose request no auth needed
+261 info attempt registry request try #1 at 10:49:27 PM
+262 http request GET https://registry.npmjs.org/deep-equal
+263 verbose request uri https://registry.npmjs.org/query-string
+264 verbose request no auth needed
+265 info attempt registry request try #1 at 10:49:27 PM
+266 http request GET https://registry.npmjs.org/query-string
+267 verbose get https://registry.npmjs.org/warning not expired, no request
+268 silly addNameRange number 2 { name: 'warning', range: '>=2.0.0 <3.0.0', hasData: true }
+269 silly addNameRange versions [ 'warning',
+269 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '2.0.0', '2.1.0', '3.0.0' ] ]
+270 silly addNamed warning@2.1.0
+271 verbose addNamed "2.1.0" is a plain semver version for warning
+272 silly mapToRegistry name warning
+273 silly mapToRegistry using default registry
+274 silly mapToRegistry registry https://registry.npmjs.org/
+275 silly mapToRegistry data Result {
+275 silly mapToRegistry   raw: 'warning',
+275 silly mapToRegistry   scope: null,
+275 silly mapToRegistry   escapedName: 'warning',
+275 silly mapToRegistry   name: 'warning',
+275 silly mapToRegistry   rawSpec: '',
+275 silly mapToRegistry   spec: 'latest',
+275 silly mapToRegistry   type: 'tag' }
+276 silly mapToRegistry uri https://registry.npmjs.org/warning
+277 verbose addRemoteTarball https://registry.npmjs.org/warning/-/warning-2.1.0.tgz not in flight; adding
+278 verbose addRemoteTarball [ 'https://registry.npmjs.org/warning/-/warning-2.1.0.tgz',
+278 verbose addRemoteTarball   '21220d9c63afc77a8c92111e011af705ce0c6901' ]
+279 info retry fetch attempt 1 at 10:49:27 PM
+280 info attempt registry request try #1 at 10:49:27 PM
+281 http fetch GET https://registry.npmjs.org/warning/-/warning-2.1.0.tgz
+282 http fetch 200 https://registry.npmjs.org/warning/-/warning-2.1.0.tgz
+283 http 200 https://registry.npmjs.org/deep-equal
+284 verbose headers { server: 'nginx/1.10.1',
+284 verbose headers   'content-type': 'application/json',
+284 verbose headers   'last-modified': 'Wed, 02 Nov 2016 02:40:34 GMT',
+284 verbose headers   etag: 'W/"58195222-309f"',
+284 verbose headers   'content-encoding': 'gzip',
+284 verbose headers   'cache-control': 'max-age=300',
+284 verbose headers   'content-length': '2266',
+284 verbose headers   'accept-ranges': 'bytes',
+284 verbose headers   date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+284 verbose headers   via: '1.1 varnish',
+284 verbose headers   age: '12',
+284 verbose headers   connection: 'keep-alive',
+284 verbose headers   'x-served-by': 'cache-jfk8127-JFK',
+284 verbose headers   'x-cache': 'HIT',
+284 verbose headers   'x-cache-hits': '1',
+284 verbose headers   'x-timer': 'S1486352967.146307,VS0,VE0',
+284 verbose headers   vary: 'Accept-Encoding' }
+285 silly get cb [ 200,
+285 silly get   { server: 'nginx/1.10.1',
+285 silly get     'content-type': 'application/json',
+285 silly get     'last-modified': 'Wed, 02 Nov 2016 02:40:34 GMT',
+285 silly get     etag: 'W/"58195222-309f"',
+285 silly get     'content-encoding': 'gzip',
+285 silly get     'cache-control': 'max-age=300',
+285 silly get     'content-length': '2266',
+285 silly get     'accept-ranges': 'bytes',
+285 silly get     date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+285 silly get     via: '1.1 varnish',
+285 silly get     age: '12',
+285 silly get     connection: 'keep-alive',
+285 silly get     'x-served-by': 'cache-jfk8127-JFK',
+285 silly get     'x-cache': 'HIT',
+285 silly get     'x-cache-hits': '1',
+285 silly get     'x-timer': 'S1486352967.146307,VS0,VE0',
+285 silly get     vary: 'Accept-Encoding' } ]
+286 verbose get saving deep-equal to /Users/burgeace/.npm/registry.npmjs.org/deep-equal/.cache.json
+287 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+288 silly fetchAndShaCheck shasum 21220d9c63afc77a8c92111e011af705ce0c6901
+289 silly resolveWithNewModule deep-equal@1.0.1 checking installable status
+290 silly cache add args [ 'deep-equal@^1.0.0', null ]
+291 verbose cache add spec deep-equal@^1.0.0
+292 silly cache add parsed spec Result {
+292 silly cache add   raw: 'deep-equal@^1.0.0',
+292 silly cache add   scope: null,
+292 silly cache add   escapedName: 'deep-equal',
+292 silly cache add   name: 'deep-equal',
+292 silly cache add   rawSpec: '^1.0.0',
+292 silly cache add   spec: '>=1.0.0 <2.0.0',
+292 silly cache add   type: 'range' }
+293 silly addNamed deep-equal@>=1.0.0 <2.0.0
+294 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for deep-equal
+295 silly addNameRange { name: 'deep-equal', range: '>=1.0.0 <2.0.0', hasData: false }
+296 silly mapToRegistry name deep-equal
+297 silly mapToRegistry using default registry
+298 silly mapToRegistry registry https://registry.npmjs.org/
+299 silly mapToRegistry data Result {
+299 silly mapToRegistry   raw: 'deep-equal',
+299 silly mapToRegistry   scope: null,
+299 silly mapToRegistry   escapedName: 'deep-equal',
+299 silly mapToRegistry   name: 'deep-equal',
+299 silly mapToRegistry   rawSpec: '',
+299 silly mapToRegistry   spec: 'latest',
+299 silly mapToRegistry   type: 'tag' }
+300 silly mapToRegistry uri https://registry.npmjs.org/deep-equal
+301 verbose addNameRange registry:https://registry.npmjs.org/deep-equal not in flight; fetching
+302 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/warning/-/warning-2.1.0.tgz not in flight; adding
+303 verbose addTmpTarball already have metadata; skipping unpack for warning@2.1.0
+304 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+305 verbose get https://registry.npmjs.org/deep-equal not expired, no request
+306 silly addNameRange number 2 { name: 'deep-equal', range: '>=1.0.0 <2.0.0', hasData: true }
+307 silly addNameRange versions [ 'deep-equal',
+307 silly addNameRange   [ '0.0.0',
+307 silly addNameRange     '0.1.0',
+307 silly addNameRange     '0.1.1',
+307 silly addNameRange     '0.1.2',
+307 silly addNameRange     '0.2.0',
+307 silly addNameRange     '0.2.1',
+307 silly addNameRange     '0.2.2',
+307 silly addNameRange     '1.0.0',
+307 silly addNameRange     '1.0.1' ] ]
+308 silly addNamed deep-equal@1.0.1
+309 verbose addNamed "1.0.1" is a plain semver version for deep-equal
+310 silly mapToRegistry name deep-equal
+311 silly mapToRegistry using default registry
+312 silly mapToRegistry registry https://registry.npmjs.org/
+313 silly mapToRegistry data Result {
+313 silly mapToRegistry   raw: 'deep-equal',
+313 silly mapToRegistry   scope: null,
+313 silly mapToRegistry   escapedName: 'deep-equal',
+313 silly mapToRegistry   name: 'deep-equal',
+313 silly mapToRegistry   rawSpec: '',
+313 silly mapToRegistry   spec: 'latest',
+313 silly mapToRegistry   type: 'tag' }
+314 silly mapToRegistry uri https://registry.npmjs.org/deep-equal
+315 verbose addRemoteTarball https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz not in flight; adding
+316 verbose addRemoteTarball [ 'https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz',
+316 verbose addRemoteTarball   'f5d260292b660e084eff4cdbc9f08ad3247448b5' ]
+317 info retry fetch attempt 1 at 10:49:27 PM
+318 info attempt registry request try #1 at 10:49:27 PM
+319 http fetch GET https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz
+320 silly cache afterAdd warning@2.1.0
+321 verbose afterAdd /Users/burgeace/.npm/warning/2.1.0/package/package.json not in flight; writing
+322 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+323 verbose afterAdd /Users/burgeace/.npm/warning/2.1.0/package/package.json written
+324 http 200 https://registry.npmjs.org/query-string
+325 verbose headers { server: 'nginx/1.10.1',
+325 verbose headers   'content-type': 'application/json',
+325 verbose headers   'last-modified': 'Sat, 14 Jan 2017 08:13:53 GMT',
+325 verbose headers   etag: 'W/"5879ddc1-a7ee"',
+325 verbose headers   'content-encoding': 'gzip',
+325 verbose headers   'cache-control': 'max-age=300',
+325 verbose headers   'content-length': '5917',
+325 verbose headers   'accept-ranges': 'bytes',
+325 verbose headers   date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+325 verbose headers   via: '1.1 varnish',
+325 verbose headers   age: '0',
+325 verbose headers   connection: 'keep-alive',
+325 verbose headers   'x-served-by': 'cache-jfk8132-JFK',
+325 verbose headers   'x-cache': 'HIT',
+325 verbose headers   'x-cache-hits': '1',
+325 verbose headers   'x-timer': 'S1486352967.146061,VS0,VE67',
+325 verbose headers   vary: 'Accept-Encoding' }
+326 silly get cb [ 200,
+326 silly get   { server: 'nginx/1.10.1',
+326 silly get     'content-type': 'application/json',
+326 silly get     'last-modified': 'Sat, 14 Jan 2017 08:13:53 GMT',
+326 silly get     etag: 'W/"5879ddc1-a7ee"',
+326 silly get     'content-encoding': 'gzip',
+326 silly get     'cache-control': 'max-age=300',
+326 silly get     'content-length': '5917',
+326 silly get     'accept-ranges': 'bytes',
+326 silly get     date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+326 silly get     via: '1.1 varnish',
+326 silly get     age: '0',
+326 silly get     connection: 'keep-alive',
+326 silly get     'x-served-by': 'cache-jfk8132-JFK',
+326 silly get     'x-cache': 'HIT',
+326 silly get     'x-cache-hits': '1',
+326 silly get     'x-timer': 'S1486352967.146061,VS0,VE67',
+326 silly get     vary: 'Accept-Encoding' } ]
+327 verbose get saving query-string to /Users/burgeace/.npm/registry.npmjs.org/query-string/.cache.json
+328 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+329 silly resolveWithNewModule query-string@3.0.3 checking installable status
+330 silly cache add args [ 'query-string@^3.0.0', null ]
+331 verbose cache add spec query-string@^3.0.0
+332 silly cache add parsed spec Result {
+332 silly cache add   raw: 'query-string@^3.0.0',
+332 silly cache add   scope: null,
+332 silly cache add   escapedName: 'query-string',
+332 silly cache add   name: 'query-string',
+332 silly cache add   rawSpec: '^3.0.0',
+332 silly cache add   spec: '>=3.0.0 <4.0.0',
+332 silly cache add   type: 'range' }
+333 silly addNamed query-string@>=3.0.0 <4.0.0
+334 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for query-string
+335 silly addNameRange { name: 'query-string', range: '>=3.0.0 <4.0.0', hasData: false }
+336 silly mapToRegistry name query-string
+337 silly mapToRegistry using default registry
+338 silly mapToRegistry registry https://registry.npmjs.org/
+339 silly mapToRegistry data Result {
+339 silly mapToRegistry   raw: 'query-string',
+339 silly mapToRegistry   scope: null,
+339 silly mapToRegistry   escapedName: 'query-string',
+339 silly mapToRegistry   name: 'query-string',
+339 silly mapToRegistry   rawSpec: '',
+339 silly mapToRegistry   spec: 'latest',
+339 silly mapToRegistry   type: 'tag' }
+340 silly mapToRegistry uri https://registry.npmjs.org/query-string
+341 verbose addNameRange registry:https://registry.npmjs.org/query-string not in flight; fetching
+342 verbose get https://registry.npmjs.org/query-string not expired, no request
+343 silly addNameRange number 2 { name: 'query-string', range: '>=3.0.0 <4.0.0', hasData: true }
+344 silly addNameRange versions [ 'query-string',
+344 silly addNameRange   [ '0.1.0',
+344 silly addNameRange     '0.1.1',
+344 silly addNameRange     '0.2.0',
+344 silly addNameRange     '0.3.0',
+344 silly addNameRange     '0.3.1',
+344 silly addNameRange     '0.4.0',
+344 silly addNameRange     '0.4.1',
+344 silly addNameRange     '1.0.0',
+344 silly addNameRange     '1.0.1',
+344 silly addNameRange     '2.0.0',
+344 silly addNameRange     '2.1.0',
+344 silly addNameRange     '2.2.0',
+344 silly addNameRange     '2.3.0',
+344 silly addNameRange     '2.4.0',
+344 silly addNameRange     '2.4.1',
+344 silly addNameRange     '2.4.2',
+344 silly addNameRange     '3.0.0',
+344 silly addNameRange     '3.0.1',
+344 silly addNameRange     '3.0.2',
+344 silly addNameRange     '3.0.3',
+344 silly addNameRange     '4.0.0',
+344 silly addNameRange     '4.0.2',
+344 silly addNameRange     '4.1.0',
+344 silly addNameRange     '4.2.0',
+344 silly addNameRange     '4.2.1',
+344 silly addNameRange     '4.2.2',
+344 silly addNameRange     '4.2.3',
+344 silly addNameRange     '4.3.0',
+344 silly addNameRange     '4.3.1' ] ]
+345 silly addNamed query-string@3.0.3
+346 verbose addNamed "3.0.3" is a plain semver version for query-string
+347 http fetch 200 https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz
+348 silly mapToRegistry name query-string
+349 silly mapToRegistry using default registry
+350 silly mapToRegistry registry https://registry.npmjs.org/
+351 silly mapToRegistry data Result {
+351 silly mapToRegistry   raw: 'query-string',
+351 silly mapToRegistry   scope: null,
+351 silly mapToRegistry   escapedName: 'query-string',
+351 silly mapToRegistry   name: 'query-string',
+351 silly mapToRegistry   rawSpec: '',
+351 silly mapToRegistry   spec: 'latest',
+351 silly mapToRegistry   type: 'tag' }
+352 silly mapToRegistry uri https://registry.npmjs.org/query-string
+353 verbose addRemoteTarball https://registry.npmjs.org/query-string/-/query-string-3.0.3.tgz not in flight; adding
+354 verbose addRemoteTarball [ 'https://registry.npmjs.org/query-string/-/query-string-3.0.3.tgz',
+354 verbose addRemoteTarball   'ae2e14b4d05071d4e9b9eb4873c35b0dcd42e638' ]
+355 info retry fetch attempt 1 at 10:49:27 PM
+356 info attempt registry request try #1 at 10:49:27 PM
+357 http fetch GET https://registry.npmjs.org/query-string/-/query-string-3.0.3.tgz
+358 silly fetchAndShaCheck shasum f5d260292b660e084eff4cdbc9f08ad3247448b5
+359 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz not in flight; adding
+360 verbose addTmpTarball already have metadata; skipping unpack for deep-equal@1.0.1
+361 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+362 silly cache afterAdd deep-equal@1.0.1
+363 verbose afterAdd /Users/burgeace/.npm/deep-equal/1.0.1/package/package.json not in flight; writing
+364 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+365 verbose afterAdd /Users/burgeace/.npm/deep-equal/1.0.1/package/package.json written
+366 http fetch 200 https://registry.npmjs.org/query-string/-/query-string-3.0.3.tgz
+367 silly fetchAndShaCheck shasum ae2e14b4d05071d4e9b9eb4873c35b0dcd42e638
+368 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/query-string/-/query-string-3.0.3.tgz not in flight; adding
+369 verbose addTmpTarball already have metadata; skipping unpack for query-string@3.0.3
+370 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+371 silly cache afterAdd query-string@3.0.3
+372 verbose afterAdd /Users/burgeace/.npm/query-string/3.0.3/package/package.json not in flight; writing
+373 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+374 verbose afterAdd /Users/burgeace/.npm/query-string/3.0.3/package/package.json written
+375 silly fetchNamedPackageData strict-uri-encode
+376 silly mapToRegistry name strict-uri-encode
+377 silly mapToRegistry using default registry
+378 silly mapToRegistry registry https://registry.npmjs.org/
+379 silly mapToRegistry data Result {
+379 silly mapToRegistry   raw: 'strict-uri-encode',
+379 silly mapToRegistry   scope: null,
+379 silly mapToRegistry   escapedName: 'strict-uri-encode',
+379 silly mapToRegistry   name: 'strict-uri-encode',
+379 silly mapToRegistry   rawSpec: '',
+379 silly mapToRegistry   spec: 'latest',
+379 silly mapToRegistry   type: 'tag' }
+380 silly mapToRegistry uri https://registry.npmjs.org/strict-uri-encode
+381 verbose request uri https://registry.npmjs.org/strict-uri-encode
+382 verbose request no auth needed
+383 info attempt registry request try #1 at 10:49:27 PM
+384 http request GET https://registry.npmjs.org/strict-uri-encode
+385 http 200 https://registry.npmjs.org/strict-uri-encode
+386 verbose headers { server: 'nginx/1.10.1',
+386 verbose headers   'content-type': 'application/json',
+386 verbose headers   'last-modified': 'Tue, 11 Oct 2016 20:09:00 GMT',
+386 verbose headers   etag: 'W/"57fd46dc-1cba"',
+386 verbose headers   'content-encoding': 'gzip',
+386 verbose headers   'cache-control': 'max-age=300',
+386 verbose headers   'content-length': '1501',
+386 verbose headers   'accept-ranges': 'bytes',
+386 verbose headers   date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+386 verbose headers   via: '1.1 varnish',
+386 verbose headers   age: '245',
+386 verbose headers   connection: 'keep-alive',
+386 verbose headers   'x-served-by': 'cache-jfk8132-JFK',
+386 verbose headers   'x-cache': 'HIT',
+386 verbose headers   'x-cache-hits': '1',
+386 verbose headers   'x-timer': 'S1486352967.450549,VS0,VE0',
+386 verbose headers   vary: 'Accept-Encoding' }
+387 silly get cb [ 200,
+387 silly get   { server: 'nginx/1.10.1',
+387 silly get     'content-type': 'application/json',
+387 silly get     'last-modified': 'Tue, 11 Oct 2016 20:09:00 GMT',
+387 silly get     etag: 'W/"57fd46dc-1cba"',
+387 silly get     'content-encoding': 'gzip',
+387 silly get     'cache-control': 'max-age=300',
+387 silly get     'content-length': '1501',
+387 silly get     'accept-ranges': 'bytes',
+387 silly get     date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+387 silly get     via: '1.1 varnish',
+387 silly get     age: '245',
+387 silly get     connection: 'keep-alive',
+387 silly get     'x-served-by': 'cache-jfk8132-JFK',
+387 silly get     'x-cache': 'HIT',
+387 silly get     'x-cache-hits': '1',
+387 silly get     'x-timer': 'S1486352967.450549,VS0,VE0',
+387 silly get     vary: 'Accept-Encoding' } ]
+388 verbose get saving strict-uri-encode to /Users/burgeace/.npm/registry.npmjs.org/strict-uri-encode/.cache.json
+389 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+390 silly resolveWithNewModule strict-uri-encode@1.1.0 checking installable status
+391 silly cache add args [ 'strict-uri-encode@^1.0.0', null ]
+392 verbose cache add spec strict-uri-encode@^1.0.0
+393 silly cache add parsed spec Result {
+393 silly cache add   raw: 'strict-uri-encode@^1.0.0',
+393 silly cache add   scope: null,
+393 silly cache add   escapedName: 'strict-uri-encode',
+393 silly cache add   name: 'strict-uri-encode',
+393 silly cache add   rawSpec: '^1.0.0',
+393 silly cache add   spec: '>=1.0.0 <2.0.0',
+393 silly cache add   type: 'range' }
+394 silly addNamed strict-uri-encode@>=1.0.0 <2.0.0
+395 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for strict-uri-encode
+396 silly addNameRange { name: 'strict-uri-encode',
+396 silly addNameRange   range: '>=1.0.0 <2.0.0',
+396 silly addNameRange   hasData: false }
+397 silly mapToRegistry name strict-uri-encode
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry https://registry.npmjs.org/
+400 silly mapToRegistry data Result {
+400 silly mapToRegistry   raw: 'strict-uri-encode',
+400 silly mapToRegistry   scope: null,
+400 silly mapToRegistry   escapedName: 'strict-uri-encode',
+400 silly mapToRegistry   name: 'strict-uri-encode',
+400 silly mapToRegistry   rawSpec: '',
+400 silly mapToRegistry   spec: 'latest',
+400 silly mapToRegistry   type: 'tag' }
+401 silly mapToRegistry uri https://registry.npmjs.org/strict-uri-encode
+402 verbose addNameRange registry:https://registry.npmjs.org/strict-uri-encode not in flight; fetching
+403 verbose get https://registry.npmjs.org/strict-uri-encode not expired, no request
+404 silly addNameRange number 2 { name: 'strict-uri-encode',
+404 silly addNameRange   range: '>=1.0.0 <2.0.0',
+404 silly addNameRange   hasData: true }
+405 silly addNameRange versions [ 'strict-uri-encode',
+405 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '1.1.0', '2.0.0' ] ]
+406 silly addNamed strict-uri-encode@1.1.0
+407 verbose addNamed "1.1.0" is a plain semver version for strict-uri-encode
+408 silly mapToRegistry name strict-uri-encode
+409 silly mapToRegistry using default registry
+410 silly mapToRegistry registry https://registry.npmjs.org/
+411 silly mapToRegistry data Result {
+411 silly mapToRegistry   raw: 'strict-uri-encode',
+411 silly mapToRegistry   scope: null,
+411 silly mapToRegistry   escapedName: 'strict-uri-encode',
+411 silly mapToRegistry   name: 'strict-uri-encode',
+411 silly mapToRegistry   rawSpec: '',
+411 silly mapToRegistry   spec: 'latest',
+411 silly mapToRegistry   type: 'tag' }
+412 silly mapToRegistry uri https://registry.npmjs.org/strict-uri-encode
+413 verbose addRemoteTarball https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz not in flight; adding
+414 verbose addRemoteTarball [ 'https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz',
+414 verbose addRemoteTarball   '279b225df1d582b1f54e65addd4352e18faa0713' ]
+415 info retry fetch attempt 1 at 10:49:27 PM
+416 info attempt registry request try #1 at 10:49:27 PM
+417 http fetch GET https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz
+418 http fetch 200 https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz
+419 silly fetchAndShaCheck shasum 279b225df1d582b1f54e65addd4352e18faa0713
+420 verbose addTmpTarball /var/folders/b_/5v8x4y8x74jfxtyyzq2ktxkdd8qd3m/T/npm-12445-78ce00b3/registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz not in flight; adding
+421 verbose addTmpTarball already have metadata; skipping unpack for strict-uri-encode@1.1.0
+422 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+423 silly cache afterAdd strict-uri-encode@1.1.0
+424 verbose afterAdd /Users/burgeace/.npm/strict-uri-encode/1.1.0/package/package.json not in flight; writing
+425 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+426 verbose afterAdd /Users/burgeace/.npm/strict-uri-encode/1.1.0/package/package.json written
+427 silly fetchOtherPackageData contentBase@/
+428 silly cache add args [ 'contentBase@/', null ]
+429 verbose cache add spec contentBase@/
+430 silly fetchNamedPackageData devtool
+431 silly mapToRegistry name devtool
+432 silly mapToRegistry using default registry
+433 silly mapToRegistry registry https://registry.npmjs.org/
+434 silly mapToRegistry data Result {
+434 silly mapToRegistry   raw: 'devtool',
+434 silly mapToRegistry   scope: null,
+434 silly mapToRegistry   escapedName: 'devtool',
+434 silly mapToRegistry   name: 'devtool',
+434 silly mapToRegistry   rawSpec: '',
+434 silly mapToRegistry   spec: 'latest',
+434 silly mapToRegistry   type: 'tag' }
+435 silly mapToRegistry uri https://registry.npmjs.org/devtool
+436 silly fetchNamedPackageData outputPath
+437 silly mapToRegistry name outputPath
+438 silly mapToRegistry using default registry
+439 silly mapToRegistry registry https://registry.npmjs.org/
+440 silly mapToRegistry data Result {
+440 silly mapToRegistry   raw: 'outputPath',
+440 silly mapToRegistry   scope: null,
+440 silly mapToRegistry   escapedName: 'outputPath',
+440 silly mapToRegistry   name: 'outputPath',
+440 silly mapToRegistry   rawSpec: '',
+440 silly mapToRegistry   spec: 'latest',
+440 silly mapToRegistry   type: 'tag' }
+441 silly mapToRegistry uri https://registry.npmjs.org/outputPath
+442 verbose request uri https://registry.npmjs.org/devtool
+443 verbose request no auth needed
+444 info attempt registry request try #1 at 10:49:27 PM
+445 http request GET https://registry.npmjs.org/devtool
+446 verbose request uri https://registry.npmjs.org/outputPath
+447 verbose request no auth needed
+448 info attempt registry request try #1 at 10:49:27 PM
+449 http request GET https://registry.npmjs.org/outputPath
+450 silly cache add parsed spec Result {
+450 silly cache add   raw: 'contentBase@/',
+450 silly cache add   scope: null,
+450 silly cache add   escapedName: 'contentBase',
+450 silly cache add   name: 'contentBase',
+450 silly cache add   rawSpec: '/',
+450 silly cache add   spec: '/',
+450 silly cache add   type: 'local' }
+451 error addLocal Could not install /
+452 silly fetchPackageMetaData Error: EISDIR: illegal operation on a directory, read
+452 silly fetchPackageMetaData  error for contentBase@/ { Error: EISDIR: illegal operation on a directory, read errno: -21, code: 'EISDIR', syscall: 'read' }
+453 http 200 https://registry.npmjs.org/devtool
+454 verbose headers { server: 'nginx/1.10.1',
+454 verbose headers   'content-type': 'application/json',
+454 verbose headers   'last-modified': 'Sat, 28 Jan 2017 20:58:37 GMT',
+454 verbose headers   etag: 'W/"588d05fd-1ad0a"',
+454 verbose headers   'content-encoding': 'gzip',
+454 verbose headers   'cache-control': 'max-age=300',
+454 verbose headers   'content-length': '11247',
+454 verbose headers   'accept-ranges': 'bytes',
+454 verbose headers   date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+454 verbose headers   via: '1.1 varnish',
+454 verbose headers   age: '0',
+454 verbose headers   connection: 'keep-alive',
+454 verbose headers   'x-served-by': 'cache-jfk8123-JFK',
+454 verbose headers   'x-cache': 'MISS',
+454 verbose headers   'x-cache-hits': '0',
+454 verbose headers   'x-timer': 'S1486352967.568375,VS0,VE8',
+454 verbose headers   vary: 'Accept-Encoding' }
+455 silly get cb [ 200,
+455 silly get   { server: 'nginx/1.10.1',
+455 silly get     'content-type': 'application/json',
+455 silly get     'last-modified': 'Sat, 28 Jan 2017 20:58:37 GMT',
+455 silly get     etag: 'W/"588d05fd-1ad0a"',
+455 silly get     'content-encoding': 'gzip',
+455 silly get     'cache-control': 'max-age=300',
+455 silly get     'content-length': '11247',
+455 silly get     'accept-ranges': 'bytes',
+455 silly get     date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+455 silly get     via: '1.1 varnish',
+455 silly get     age: '0',
+455 silly get     connection: 'keep-alive',
+455 silly get     'x-served-by': 'cache-jfk8123-JFK',
+455 silly get     'x-cache': 'MISS',
+455 silly get     'x-cache-hits': '0',
+455 silly get     'x-timer': 'S1486352967.568375,VS0,VE8',
+455 silly get     vary: 'Accept-Encoding' } ]
+456 verbose get saving devtool to /Users/burgeace/.npm/registry.npmjs.org/devtool/.cache.json
+457 verbose correctMkdir /Users/burgeace/.npm correctMkdir not in flight; initializing
+458 silly fetchPackageMetaData Error: No compatible version found: devtool@eval
+458 silly fetchPackageMetaData Valid install targets:
+458 silly fetchPackageMetaData 2.3.1, 2.3.0, 2.2.0, 2.1.0, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.11.2, 1.11.1, 1.11.0, 1.10.0, 1.9.1, 1.8.3, 1.8.2, 1.8.1, 1.8.0, 1.7.6, 1.7.5, 1.7.4, 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6.0, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.4.1, 1.4.0, 1.3.1, 1.3.0, 1.2.2, 1.2.1, 1.2.0, 1.0.0, 0.0.0
+458 silly fetchPackageMetaData
+458 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+458 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+458 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+458 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+458 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:261:18
+458 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:112:15)
+458 silly fetchPackageMetaData  error for devtool@eval { Error: No compatible version found: devtool@eval
+458 silly fetchPackageMetaData Valid install targets:
+458 silly fetchPackageMetaData 2.3.1, 2.3.0, 2.2.0, 2.1.0, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.11.2, 1.11.1, 1.11.0, 1.10.0, 1.9.1, 1.8.3, 1.8.2, 1.8.1, 1.8.0, 1.7.6, 1.7.5, 1.7.4, 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6.0, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.4.1, 1.4.0, 1.3.1, 1.3.0, 1.2.2, 1.2.1, 1.2.0, 1.0.0, 0.0.0
+458 silly fetchPackageMetaData
+458 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+458 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+458 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+458 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+458 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:261:18
+458 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:112:15) code: 'ETARGET' }
+459 http 404 https://registry.npmjs.org/outputPath
+460 verbose headers { 'content-type': 'application/json',
+460 verbose headers   'cache-control': 'max-age=0',
+460 verbose headers   'content-length': '2',
+460 verbose headers   'accept-ranges': 'bytes',
+460 verbose headers   date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+460 verbose headers   via: '1.1 varnish',
+460 verbose headers   age: '0',
+460 verbose headers   connection: 'keep-alive',
+460 verbose headers   'x-served-by': 'cache-jfk8132-JFK',
+460 verbose headers   'x-cache': 'MISS',
+460 verbose headers   'x-cache-hits': '0',
+460 verbose headers   'x-timer': 'S1486352967.568125,VS0,VE87',
+460 verbose headers   vary: 'Accept-Encoding' }
+461 silly get cb [ 404,
+461 silly get   { 'content-type': 'application/json',
+461 silly get     'cache-control': 'max-age=0',
+461 silly get     'content-length': '2',
+461 silly get     'accept-ranges': 'bytes',
+461 silly get     date: 'Mon, 06 Feb 2017 03:49:27 GMT',
+461 silly get     via: '1.1 varnish',
+461 silly get     age: '0',
+461 silly get     connection: 'keep-alive',
+461 silly get     'x-served-by': 'cache-jfk8132-JFK',
+461 silly get     'x-cache': 'MISS',
+461 silly get     'x-cache-hits': '0',
+461 silly get     'x-timer': 'S1486352967.568125,VS0,VE87',
+461 silly get     vary: 'Accept-Encoding' } ]
+462 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/outputPath
+462 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+462 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+462 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+462 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+462 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+462 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+462 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+462 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+462 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+462 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+462 silly fetchPackageMetaData  error for outputPath@buildPath { Error: Registry returned 404 for GET on https://registry.npmjs.org/outputPath
+462 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+462 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+462 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+462 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+462 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+462 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+462 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+462 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+462 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+462 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12) pkgid: 'outputPath', statusCode: 404, code: 'E404' }
+463 silly rollbackFailedOptional Starting
+464 silly rollbackFailedOptional Finishing
+465 silly runTopLevelLifecycles Finishing
+466 silly install printInstalled
+467 verbose stack Error: EISDIR: illegal operation on a directory, read
+468 verbose cwd /Users/burgeace/Projects/interline-records/interline-records-react/interline-records/public
+469 error Darwin 15.6.0
+470 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+471 error node v7.4.0
+472 error npm  v4.0.5
+473 error code EISDIR
+474 error errno -21
+475 error syscall read
+476 error eisdir EISDIR: illegal operation on a directory, read
+477 error eisdir This is most likely not a problem with npm itself
+477 error eisdir and is related to npm not being able to find a package.json in
+477 error eisdir a package you are trying to install.
+478 verbose exit [ -21, true ]
