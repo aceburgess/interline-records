@@ -5,7 +5,16 @@ var counter = 0;
 
 class ArtistList extends Component {
 
+	sortArtistsByLength(artists) {
+		if (artists.length > 1) {
+			artists.sort(function(a,b){ return a.name.length - b.name.length; })
+		} else {
+			return artists;
+		}
+	}
+
 	render(){
+		var artists = this.sortArtistsByLength(this.props.artists);
 		var {artists} = this.props;
 		return (
 			<div className="side-nav">

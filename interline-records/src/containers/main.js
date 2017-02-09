@@ -91,7 +91,7 @@ class Main extends Component {
 
 function mapStateToProps(state) {
 	return {
-		artists: state.artists.body
+    artists: state.artists.data
 	}
 }
 

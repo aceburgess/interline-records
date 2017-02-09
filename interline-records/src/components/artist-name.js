@@ -5,9 +5,6 @@ class ArtistName extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {
-			artist: {name: 'FUCK', id: 1}
-		}
 	}
 
 	componentWDidMount() {
@@ -18,7 +15,7 @@ class ArtistName extends Component {
 
 
 	render(){
-		var {artist} = this.state;
+		var {artist} = this.props;
 		return (
 			<li key={'artist-' + artist.id} id={'artist-' + artist.id} className={"artist"}>
 				{artist.name}

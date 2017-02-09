@@ -1,7 +1,7 @@
 import { REQUEST_ARTISTS } from '../actions';
 
 const initialState = {
-  body: []
+	data: []
 };
 
 
@@ -9,7 +9,7 @@ export default function artists(state = initialState, action) {
   switch (action.type) {
     case REQUEST_ARTISTS:
       return Object.assign({}, state, {
-        artists: action.payload.body
+        data: action.payload.body
       })
     default:
       return state;
