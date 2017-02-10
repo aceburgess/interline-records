@@ -1,0 +1,25 @@
+import React, {Component} from 'react';
+
+
+class ArtistName extends Component {
+
+	constructor(props) {
+		super(props);
+	}
+
+	selectArtist(){
+		this.props.selectArtist(this.props.artist);
+	}
+
+	render(){
+		var {artist} = this.props;
+		return (
+			<li onClick={this.selectArtist.bind(this)} key={'artist-' + artist.id} id={'artist-' + artist.id} className={"artist"}>
+				{artist.name}
+			</li>
+		);
+	}
+
+}
+
+export default ArtistName
