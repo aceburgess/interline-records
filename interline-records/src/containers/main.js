@@ -82,7 +82,7 @@ class Main extends Component {
 		return (
       <div id="fullpage">
       		<Home />
-      		<Artist artists={this.props.artists} />
+      		<Artist selectArtist={this.props.actions.selectArtist} currentArtist={this.props.selectedArtist} artists={this.props.artists} />
       		<About />
 			</div>
 		);
@@ -91,7 +91,8 @@ class Main extends Component {
 
 function mapStateToProps(state) {
 	return {
-    artists: state.artists.data
+    artists: state.artists.data,
+    selectedArtist: state.artists.selectedArtist
 	}
 }
 

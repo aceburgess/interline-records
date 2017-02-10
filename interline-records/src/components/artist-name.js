@@ -7,17 +7,14 @@ class ArtistName extends Component {
 		super(props);
 	}
 
-	componentWDidMount() {
-		this.setState({
-			artist: this.props.artist
-		});
+	selectArtist(){
+		this.props.selectArtist(this.props.artist);
 	}
-
 
 	render(){
 		var {artist} = this.props;
 		return (
-			<li key={'artist-' + artist.id} id={'artist-' + artist.id} className={"artist"}>
+			<li onClick={this.selectArtist.bind(this)} key={'artist-' + artist.id} id={'artist-' + artist.id} className={"artist"}>
 				{artist.name}
 			</li>
 		);

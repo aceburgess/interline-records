@@ -20,7 +20,7 @@ class ArtistList extends Component {
 			<div className="side-nav">
 				<ul>
 					{artists.map( (artist) =>
-						<ArtistName key={artist.id} artist={artist} />
+						<ArtistName selectArtist={this.props.selectArtist} key={artist.id} artist={artist} />
 					)}
 				</ul>
 			</div>

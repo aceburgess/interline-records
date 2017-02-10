@@ -3,20 +3,20 @@ import React, {Component} from 'react';
 function backgroundStyle(url){
 	return {
 		backgroundImage: 'url(' + url + ')',
-		backgroundSize: 'cover',
-		overflow: 'hidden'
+		// backgroundSize: 'cover',
+		// overflow: 'hidden'
 	}
 }
+
 
 
 class ArtistImage extends Component {
 
 	render(){
-		var { artists } = this.props;
+		var {artist} = this.props;
 		return (
 			<div>
-				<h1>{artists.length}</h1>
-				<div key={artists[Object.keys(artists)[0]] + '-photo'} style={backgroundStyle(`http://google.com`)} id={"artist-photo-" + artists[Object.keys(artists)[0]]} className="artist-image"></div>
+				<div key={artist.name + '-photo'} style={backgroundStyle(artist.photo)} id={"artist-photo-" + artist.name} className="artist-image"></div>
 			</div>
 		);
 	}
