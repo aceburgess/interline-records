@@ -20,7 +20,8 @@ class ArtistDetail extends Component {
 					<div className="row ap-row">
 						<div className="col-md-1"></div>
 						<div className="col-md-3 ad-biography">{artist.biography}</div>
-						<div className="col-md-7">
+						<div className="col-md-1"></div>
+						<div className="col-md-6">
 							<ArtistImage artist={artist} />
 						</div>
 						<div className="col-md-1"></div>

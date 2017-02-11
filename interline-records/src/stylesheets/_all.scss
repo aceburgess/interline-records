@@ -2,6 +2,16 @@
 @import 'variables';
 
 body {
+
+	::selection {
+		background: $yellow;
+		color: $black;
+	}
+
+	::-moz-selection {
+		background: $yellow;
+		color: $black;
+	}
 	
 	.site-container {
 		margin: 20px;
