@@ -1,0 +1,119 @@
+// LANDING PAGE
+
+#landing-page {
+
+	background: url('/images/new-york-matte.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .lp-logo-container {
+
+		text-align: center;
+
+  	.lp-logo {
+			float: none;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			width: 80%;
+			padding-bottom: 5%;
+			/*height: 60%;*/
+			opacity: 0.9;
+  	}
+
+  }
+	
+
+
+}
+
+
+// ARTISTS PAGE
+
+#artists-page {
+  background: white; /* For browsers that do not support gradients */
+  background: linear-gradient(145deg, white, $background-color-white); /* Standard syntax */
+
+	.ap-row {
+
+		height: 100%;
+
+		.ap-logo-container, .ap-side-nav {
+			text-align: right;
+			font-size: 1.3em;
+		}
+
+		.ap-logo-container {
+			.ap-logo {
+				max-width: 200px;
+			}
+		}
+
+		.ap-side-nav {
+			padding-top: 0.6em;
+
+			.artist {
+				list-style: none;
+			}
+		}
+
+		.artist-image {
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			width: 100%;
+			height: 500px;
+		}
+
+	}
+	
+}
+
+
+// ARTIST DETAIL PAGE
+
+#artist-detail-page {
+
+	background-color: rgba(1,5,3,1); /* Standard syntax */
+	background: url('/images/argentina-stars.jpg') no-repeat center center fixed;
+
+	color: rgba(255,255,250,0.9);
+
+	.ad-links {
+		font-family: $sans-serif;
+		font-weight: 100;
+		text-align: right;
+	}
+
+	.ad-name {
+		font-family: $serif;
+		font-weight: 100;
+		font-size: 2em;
+		color: rgba(250,250,100, 0.7);
+	}
+
+	.ad-biography {
+		font-size: 1.1em;
+		text-align: justify;
+		font-family: $sans-serif;
+		font-weight: 100;
+		font-style: italic;
+		color: rgba(180,185, 175, 0.8);
+	}
+
+}
+
+@media (max-width: 991px) {
+	.artist-page-logo-container, .side-nav {
+		text-align: center;
+	}
+	#main-page #main-logo {
+		width: 100%;
+	}
+}

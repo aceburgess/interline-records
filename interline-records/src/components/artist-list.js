@@ -17,7 +17,7 @@ class ArtistList extends Component {
 		var artists = this.sortArtistsByLength(this.props.artists);
 		var {artists} = this.props;
 		return (
-			<div className="side-nav">
+			<div className="ap-side-nav">
 				<ul>
 					{artists.map( (artist) =>
 						<ArtistName selectArtist={this.props.selectArtist} key={artist.id} artist={artist} />

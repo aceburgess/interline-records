@@ -8,21 +8,21 @@ class Artist extends Component {
 	onInputChange(term) {
 		console.log(term);
 		// this.props.getArtists(term);
+		{/*	<input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} /> */}
 	}
 
   render(){
   	var { artists, currentArtist, selectArtist } = this.props;
 
     return (
-  		<div id="artists" className="fullpage-section">
+  		<div id="artists-page" className="fullpage-section">
   			<div className="fullpage-slide" data-anchor="artists-slide">
-		{/*				<input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} /> */}
 					<div className="container-fluid site-container">
 						<div className="row"></div>
-						<div className="row artist-page-row">
+						<div className="row ap-row">
 							<div className="col-md-3">
-								<div className="artist-page-logo-container">
-									<img id="artist-page-logo" src="/images/interline-logo.png" alt="#"/>
+								<div className="ap-logo-container">
+									<img className="ap-logo" src="/images/interline-logo.png" alt="#"/>
 								</div>
 							  <ArtistList selectArtist={selectArtist} artists={artists} />
 							</div>
@@ -39,5 +39,6 @@ class Artist extends Component {
     );
   }
 }
+
 
 export default Artist

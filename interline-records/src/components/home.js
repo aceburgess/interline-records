@@ -9,9 +9,9 @@ class Home extends Component {
 		// }
 
     return (
-    	<div id="main-page-background" className="fullpage-section">
-				<div id="main-page" className="container-fluid site-container">
-					<img id="main-logo" src="/images/interline-logo.png" alt="#"/>
+    	<div id="landing-page" className="fullpage-section">
+				<div className="container-fluid site-container lp-logo-container">
+					<img className="lp-logo" src="/images/interline-logo.png" alt="#"/>
 				</div>
     	</div>
     );

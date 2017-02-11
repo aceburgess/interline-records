@@ -54,7 +54,7 @@ class Main extends Component {
 	    recordHistory: true,
 
 	    //Design
-	    controlArrows: true,
+	    controlArrows: false,
 	    // verticalCentered: false,
 	    sectionsColor : ['#ccc', '#fff'],
 	    // paddingTop: '0em',
