@@ -17,7 +17,7 @@ class Main extends Component {
 	    lockAnchors: false,
 	    anchors:['firstPage', 'secondPage'],
 	    navigation: false,
-	    navigationPosition: 'right',
+	    navigationPosition: 'bottom',
 	    navigationTooltips: ['firstSlide', 'secondSlide'],
 	    showActiveTooltip: false,
 	    slidesNavigation: true,
@@ -25,7 +25,7 @@ class Main extends Component {
 
 	    //Scrolling
 	    css3: true,
-	    scrollingSpeed: 700,
+	    scrollingSpeed: 500,
 	    autoScrolling: true,
 	    fitToSection: true,
 	    fitToSectionDelay: 1000,
@@ -65,8 +65,8 @@ class Main extends Component {
 	    responsiveSlides: false,
 
 	    //Custom selectors
-	    sectionSelector: '.section',
-	    slideSelector: '.slide',
+	    sectionSelector: '.fullpage-section',
+	    slideSelector: '.fullpage-slide',
 
 	    //events
 	    onLeave: function(index, nextIndex, direction){},
