@@ -2,7 +2,7 @@
 
 #landing-page {
 
-	background: url('/images/new-york-matte.jpg') no-repeat center center fixed; 
+	background: url('/images/new-york-sky.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,7 +20,7 @@
 			width: 80%;
 			padding-bottom: 5%;
 			/*height: 60%;*/
-			opacity: 0.9;
+			opacity: 0.8;
   	}
 
   }
@@ -41,9 +41,8 @@
 
 		height: 100%;
 
-		.ap-logo-container, .ap-side-nav {
+		.ap-logo-container {
 			text-align: right;
-			font-size: 1em;
 		}
 
 		.ap-logo-container {
@@ -54,10 +53,12 @@
 		}
 
 		.ap-side-nav {
-			padding-top: 0.6em;
+			text-align: left;
+			font-size: 3em;
 
 			.artist {
 				font-family: $serif;
+				font-weight: 300;
 				list-style: none;
 			}
 		}
@@ -83,16 +84,10 @@
 
 #artist-detail-page {
 
-	background-color: rgba(1,5,3,1); /* Standard syntax */
+	background-color: $black; /* Standard syntax */
 	background: url('/images/argentina-stars.jpg') no-repeat center center fixed;
 
 	color: $white;
-
-	.ad-links {
-		font-family: $sans-serif;
-		font-weight: 100;
-		text-align: right;
-	}
 
 	.ad-name {
 		font-family: $serif;
@@ -108,6 +103,19 @@
 		font-weight: 300;
 		font-style: italic;
 		color: $white;
+
+		.ad-links {
+			padding-top: 2em;
+			font-family: $sans-serif;
+			font-style: normal;
+			font-weight: 100;
+			font-size: 1.4em;
+			text-align: left;
+			word-spacing: 0.2em;
+			letter-spacing: 0.2em;
+			line-height: 1.5em;
+		}
+
 	}
 
 	.artist-image {

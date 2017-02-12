@@ -20,14 +20,13 @@ class Artist extends Component {
 					<div className="container-fluid site-container">
 						<div className="row"></div>
 						<div className="row ap-row">
-							<div className="col-md-3">
+							<div className="col-md-4">
 								<div className="ap-logo-container">
 									<img className="ap-logo" src="/images/interline-logo.png" alt="#"/>
 								</div>
-							  <ArtistList selectArtist={selectArtist} artists={artists} />
 							</div>
-							<div className="col-md-8">
-								<ArtistImage artist={currentArtist} artists={artists} />
+							<div className="col-md-7">
+							  <ArtistList selectArtist={selectArtist} artists={artists} />
 							</div>
 							<div className="col-md-1"></div>
 						</div>

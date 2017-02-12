@@ -14,12 +14,15 @@ class ArtistDetail extends Component {
 					<div className="row">
 						<div className="col-md-1"></div>
 						<div className="col-md-3"><h2 className="ad-name">{artist.name}</h2></div>
-						<div className="col-md-7"><h5 className="ad-links">SPOTIFY | BANDCAMP | SOUNDCLOUD | WEBSITE | ITUNES</h5></div>
+						<div className="col-md-7"></div>
 						<div className="col-md-1"></div>
 					</div>
 					<div className="row ap-row">
 						<div className="col-md-1"></div>
-						<div className="col-md-3 ad-biography">{artist.biography}</div>
+						<div className="col-md-3 ad-biography">
+							{artist.biography}
+							<h5 className="ad-links">Go to {artist.name + "'s"}:<br/> Spotify, Youtube, Bandcamp, Itunes, Facebook, Twitter, Instagram</h5>
+						</div>
 						<div className="col-md-1"></div>
 						<div className="col-md-6">
 							<ArtistImage artist={artist} />
