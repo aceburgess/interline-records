@@ -8,7 +8,7 @@ class ArtistDetail extends Component {
 		var {artist, artists} = this.props;
 
 		return (
-			<div id="artist-detail-page" className="fullpage-slide" data-anchor="single-artist-slide">
+			<div id="artist-detail-page" className="fullpage-section">
 				<div className="container-fluid site-container">
 					<div className="row"></div>
 					<div className="row">
@@ -17,7 +17,7 @@ class ArtistDetail extends Component {
 						<div className="col-md-7"></div>
 						<div className="col-md-1"></div>
 					</div>
-					<div className="row ap-row">
+					<div className="row ad-row">
 						<div className="col-md-1"></div>
 						<div className="col-md-3 ad-biography">
 							{artist.biography}

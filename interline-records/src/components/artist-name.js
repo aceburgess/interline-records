@@ -15,7 +15,9 @@ class ArtistName extends Component {
 		var {artist} = this.props;
 		return (
 			<li onClick={this.selectArtist.bind(this)} key={'artist-' + artist.id} id={'artist-' + artist.id} className={"artist"}>
-				{artist.name}
+				<a href="#thirdPage">
+					{artist.name}
+				</a>
 			</li>
 		);
 	}

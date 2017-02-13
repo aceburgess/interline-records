@@ -33,8 +33,8 @@
 // ARTISTS PAGE
 
 #artists-page {
-  background: white; /* For browsers that do not support gradients */
-  background: url('/images/argentina-stars-invert.jpg') no-repeat center center fixed;
+  background: $white; /* For browsers that do not support gradients */
+  background: url('/images/argentina-stars-invert.jpg') no-repeat bottom center;
   // background: linear-gradient(145deg, white, $background-color-white); /* Standard syntax */
 
 	.ap-row {
@@ -52,14 +52,51 @@
 			}
 		}
 
-		.ap-side-nav {
+		.ap-navigation {
+			padding-top: 1em;
+			list-style: none;
+			text-align: right;
+			font-family: $sans-serif;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 1.3em;
+			word-spacing: 0.1em;
+			letter-spacing: 0.1em;
+			line-height: 1.4em;
+
+			li {
+				opacity: 0.5;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		.ap-artist-nav {
 			text-align: left;
 			font-size: 3em;
 
+
 			.artist {
+				// font-style: normal;
 				font-family: $serif;
 				font-weight: 300;
 				list-style: none;
+
+				a {
+					color: $black;
+
+					&:hover {
+						text-decoration: none;
+						color: $black;
+						background: $yellow;
+					}
+
+					&:visited, &:active, &:focus {
+						text-decoration: none;
+					}
+				}
 			}
 		}
 
@@ -84,10 +121,30 @@
 
 #artist-detail-page {
 
-	background-color: $black; /* Standard syntax */
-	background: url('/images/argentina-stars.jpg') no-repeat center center fixed;
+	background: $black; /* Standard syntax */
+	background: url('/images/argentina-stars.jpg') no-repeat center center;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 
 	color: $white;
+
+	.ad-row {
+		height: 100%;
+
+		.artist-image {
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			width: 100%;
+			height: 500px;
+		}
+	}
 
 	.ad-name {
 		font-family: $serif;
@@ -118,9 +175,6 @@
 
 	}
 
-	.artist-image {
-		opacity: 0.8;
-	}
 
 }
 

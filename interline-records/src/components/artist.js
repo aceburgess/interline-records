@@ -16,7 +16,6 @@ class Artist extends Component {
 
     return (
   		<div id="artists-page" className="fullpage-section">
-  			<div className="fullpage-slide" data-anchor="artists-slide">
 					<div className="container-fluid site-container">
 						<div className="row"></div>
 						<div className="row ap-row">
@@ -24,6 +23,12 @@ class Artist extends Component {
 								<div className="ap-logo-container">
 									<img className="ap-logo" src="/images/interline-logo.png" alt="#"/>
 								</div>
+								<ul className="ap-navigation">
+									<li>About</li>
+									<li>Artists</li>
+									<li>Contact</li>
+									<li>Store</li>
+								</ul>
 							</div>
 							<div className="col-md-7">
 							  <ArtistList selectArtist={selectArtist} artists={artists} />
@@ -32,8 +37,6 @@ class Artist extends Component {
 						</div>
 						<div className="row"></div>
 					</div>
-				</div>
-				<ArtistDetail artist={currentArtist} artists={artists} />
 			</div>
     );
   }

@@ -5,6 +5,7 @@ import * as Actions from '../actions';
 import Home from '../components/home';
 import Artist from '../components/artist';
 import About from '../components/about';
+import ArtistDetail from '../components/artist-detail';
 
 class Main extends Component {
 
@@ -15,7 +16,7 @@ class Main extends Component {
 	    //Navigation
 	    menu: '#menu',
 	    lockAnchors: false,
-	    anchors:['firstPage', 'secondPage'],
+	    anchors:['firstPage', 'secondPage', 'thirdPage'],
 	    navigation: false,
 	    navigationPosition: 'bottom',
 	    navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -56,7 +57,7 @@ class Main extends Component {
 	    //Design
 	    controlArrows: false,
 	    // verticalCentered: false,
-	    sectionsColor : ['#ccc', '#fff'],
+	    // sectionsColor : ['#ccc', '#fff', '#ccc'],
 	    // paddingTop: '0em',
 	    // paddingBottom: '10px',
 	    // fixedElements: '#header, .footer',
@@ -83,7 +84,7 @@ class Main extends Component {
       <div id="fullpage">
       		<Home />
       		<Artist selectArtist={this.props.actions.selectArtist} currentArtist={this.props.selectedArtist} artists={this.props.artists} />
-      		<About />
+      		<ArtistDetail artist={this.props.selectedArtist} artists={this.props.artists} />
 			</div>
 		);
 	}
