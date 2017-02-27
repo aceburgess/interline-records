@@ -4,14 +4,14 @@ export const REQUEST_ARTISTS = 'REQUEST_ARTISTS';
 export const SELECT_ARTIST = 'SELECT_ARTIST';
 
 // const API_URL = 'http://local-dev-application.com:8000/artists/?format=json';
-const API_URL = process.env.API_URL;
-const API_KEY = process.env.API_KEY;
+const API_URL = 'http://local-dev-application.com:8000';
+const API_KEY = 'c2582285e11cc92a937dc85bf94b4964a909f40c';
 
 var headersObject = {mode: 'cors', Authentication: API_KEY};
 
 export function requestArtists(term = null) {
-	const artistURL = `${API_URL}/artists/?format=json`
-	const data = request.get(artistURL, headersObject);
+	const artistURL = API_URL + '/artists/?format=json'
+	const data = request.get(artistURL);
 	// const data = request.get(`${API_URL}${term.replace(/\s/g, '+')}${API_KEY}`);
 
 	// console.log(term);

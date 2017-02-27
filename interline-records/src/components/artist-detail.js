@@ -11,17 +11,24 @@ class ArtistDetail extends Component {
 			<div id="artist-detail-page" className="fullpage-section">
 				<div className="container-fluid site-container">
 					<div className="row"></div>
-					<div className="row">
+					<div className="row artist-name-row">
 						<div className="col-md-1"></div>
-						<div className="col-md-3"><h2 className="ad-name">{artist.name}</h2></div>
-						<div className="col-md-7"></div>
+						<div className="col-md-3">
+							<div className="ad-logo-container">
+								<img className="ad-logo" src="/images/interline-logo.png" alt="#"/>
+							</div>
+						</div>
+						<div className="col-md-1"></div>
+						<div className="col-md-6">
+							<h2 className="ad-name">{artist.name}</h2>
+						</div>
 						<div className="col-md-1"></div>
 					</div>
 					<div className="row ad-row">
 						<div className="col-md-1"></div>
 						<div className="col-md-3 ad-biography">
 							{artist.biography}
-							<h5 className="ad-links">Go to {artist.name + "'s"}:<br/> Spotify, Youtube, Bandcamp, Itunes, Facebook, Twitter, Instagram</h5>
+							<div className="ad-links">Go to {artist.name + "'s"}:<br/> Spotify, Youtube, Bandcamp, Itunes, Facebook, Twitter, Instagram</div>
 						</div>
 						<div className="col-md-1"></div>
 						<div className="col-md-6">
