@@ -16,27 +16,27 @@ class Artist extends Component {
 
     return (
   		<div id="artists-page" className="fullpage-section">
-					<div className="container-fluid site-container">
-						<div className="row"></div>
-						<div className="row ap-row">
-							<div className="col-md-4">
-								<div className="ap-logo-container">
-									<img className="ap-logo" src="/images/interline-logo.png" alt="#"/>
-								</div>
-								<ul className="ap-navigation">
-									<li>About</li>
-									<li>Artists</li>
-									<li>Contact</li>
-									<li>Store</li>
-								</ul>
+				<div className="container-fluid site-container">
+					<div className="row"></div>
+					<div className="row ap-row">
+						<div className="col-md-4">
+							<div className="ap-logo-container">
+								<img className="ap-logo" src="/images/interline-logo.png" alt="#"/>
 							</div>
-							<div className="col-md-7">
-							  <ArtistList selectArtist={selectArtist} artists={artists} />
-							</div>
-							<div className="col-md-1"></div>
+							<ul className="ap-navigation">
+								<li><a href="#site-modal" rel="modal:open">Contact / About</a></li>
+								<li>Facebook</li>
+								<li>Twitter</li>
+								<li>Store</li>
+							</ul>
 						</div>
-						<div className="row"></div>
+						<div className="col-md-7">
+						  <ArtistList selectArtist={selectArtist} artists={artists} />
+						</div>
+						<div className="col-md-1"></div>
 					</div>
+					<div className="row"></div>
+				</div>
 			</div>
     );
   }

@@ -67,6 +67,11 @@
 			li {
 				opacity: 0.5;
 
+				a {
+					color: $black;
+					text-decoration: none;
+				}
+
 				&:hover {
 					opacity: 1;
 				}
@@ -175,7 +180,62 @@
 
 	}
 
+}
 
+// MODAL
+
+.modal {
+	opacity: 1 !important;
+	font-family: $serif;
+	color: $white;
+
+	.row {
+		div {
+			margin-right: 1em;
+		}
+	}
+
+	h1 {
+		font-weight: 100;
+		font-size: 2.3em;
+		text-align: center;
+		letter-spacing: 0.1em;
+	}
+
+	hr {
+		opacity: 0.5;
+	}
+
+	.modal-text {
+		font-family: $sans-serif;
+		font-style: normal;
+		font-weight: 100;
+		font-size: 1.2em;
+		text-align: justify;
+		word-spacing: 0.1em;
+		letter-spacing: 0.2em;
+		line-height: 1.3em;
+	}
+
+	.close-site-modal {
+		font-family: $sans-serif;
+		font-size: 2em;
+		font-weight: 100;
+		text-decoration: none;
+		color: $white;
+		padding-left: 0.6em;
+		// padding-top: 0.2em;
+
+		&:hover {
+			text-decoration: none;
+			color: $yellow;
+			opacity: 0.9;
+
+			::after {
+				content: "CLOSE";
+			}
+		}
+	}
 }
 
 @media (max-width: 991px) {
