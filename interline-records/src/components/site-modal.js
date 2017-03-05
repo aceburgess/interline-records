@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 class SiteModal extends Component {
 
 	render(){
+		var { modalState } = this.props
+
 		return (
 			<div id="site-modal" className="modal">
 				<div className="row"></div>
@@ -15,10 +17,10 @@ class SiteModal extends Component {
 					<div className="col-md-1">
 					</div>
 					<div className="col-md-3 about">
-						<h1>About</h1>
+						<h1>{modalState.title}</h1>
 					</div>
 					<div className="col-md-3">
-						<p className="modal-text">Started in 2011 in Harlem, NYC. Now based in Brooklyn NY. Working with great artists accross the globe in various genres.</p>
+						<p className="modal-text">{modalState.content}</p>
 					</div>
 					<div className="col-md-3">
 					</div>

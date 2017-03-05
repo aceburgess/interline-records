@@ -100,7 +100,7 @@ class Main extends Component {
       		<Home />
       		<Artist selectArtist={this.props.actions.selectArtist} currentArtist={this.props.selectedArtist} artists={this.props.artists} />
       		<ArtistDetail artist={this.props.selectedArtist} artists={this.props.artists} />
-      		<SiteModal />
+      		<SiteModal modalState={this.props.modalState} />
 			</div>
 		);
 	}
@@ -109,7 +109,8 @@ class Main extends Component {
 function mapStateToProps(state) {
 	return {
     artists: state.artists.data,
-    selectedArtist: state.artists.selectedArtist
+    selectedArtist: state.artists.selectedArtist,
+    modalState: state.artists.modalState
 	}
 }
 

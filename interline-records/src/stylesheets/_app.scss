@@ -164,11 +164,16 @@
 		font-weight: 100;
 		font-size: 2em;
 		color: $yellow;
-		background-color: $black;
+		background: $black;
 		text-align: center;
 		padding-top: 0.2em;
 		padding-bottom: 0.2em;
 
+		&:hover {
+			color: $black;
+			background: $yellow;
+			font-weight: 300;
+		}
 	}
 
 	.ad-biography {

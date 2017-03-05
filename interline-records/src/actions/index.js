@@ -2,6 +2,7 @@ import request from 'superagent';
 
 export const REQUEST_ARTISTS = 'REQUEST_ARTISTS';
 export const SELECT_ARTIST = 'SELECT_ARTIST';
+export const CHANGE_MODAL = 'CHANGE_MODAL';
 
 // const API_URL = 'http://local-dev-application.com:8000/artists/?format=json';
 const API_URL = 'http://local-dev-application.com:8000';
@@ -25,5 +26,12 @@ export function selectArtist(artist) {
 	return {
 		type: SELECT_ARTIST,
 		payload: artist
+	}
+}
+
+export function changeModal(modalState) {
+	return {
+		type: CHANGE_MODAL,
+		payload: modalState
 	}
 }

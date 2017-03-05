@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ArtistList from './artist-list';
 import ArtistImage from './artist-image';
 import ArtistDetail from './artist-detail';
+import ModalLink from './modal-link';
 
 class Artist extends Component {
 
@@ -24,7 +25,8 @@ class Artist extends Component {
 								<img className="ap-logo" src="/images/interline-logo.png" alt="#"/>
 							</div>
 							<ul className="ap-navigation">
-								<li><a href="#site-modal" rel="modal:open">Contact / About</a></li>
+								<li><ModalLink text="About Us"/></li>
+								<li><ModalLink text="Contact"/></li>
 								<li>Facebook</li>
 								<li>Twitter</li>
 								<li>Store</li>
