@@ -10,13 +10,13 @@ export const CHANGE_MODAL = 'CHANGE_MODAL';
 
 // DEV SERVER seenonvhs.com
 const API_URL = 'https://seenonvhs.com';
-const API_KEY = '24d30374d0a32eb548953959ebe5a64dd3bbedd8';
+const API_KEY = 'Token 926cf0642180d86cc918bdba92cd46d980a47ccb';
 
-var headersObject = {mode: 'cors', Authentication: API_KEY};
+var headersObject = {'Authorization': API_KEY};
 
 export function requestArtists(term = null) {
 	const artistURL = API_URL + '/artists/?format=json'
-	const data = request.get(artistURL);
+	const data = request.get(artistURL).set(headersObject);
 	// const data = request.get(`${API_URL}${term.replace(/\s/g, '+')}${API_KEY}`);
 
 	// console.log(term);
