@@ -16,6 +16,11 @@ class ArtistList extends Component {
 	render(){
 		var artists = this.sortArtistsByLength(this.props.artists);
 		var {artists} = this.props;
+
+		var artists = artists.filter( function(artist){
+			return !!artist.display_artist;
+		})
+
 		return (
 			<div className="ap-artist-nav">
 				<ul>
