@@ -14,6 +14,7 @@ class ArtistList extends Component {
 	}
 
 	render(){
+		var count = 0;
 		var artists = this.sortArtistsByLength(this.props.artists);
 		var {artists} = this.props;
 
@@ -25,7 +26,7 @@ class ArtistList extends Component {
 			<div className="ap-artist-nav">
 				<ul>
 					{artists.map( (artist) =>
-						<ArtistName selectArtist={this.props.selectArtist} key={artist.id} artist={artist} />
+						<ArtistName selectArtist={this.props.selectArtist} key={count +=1} artist={artist} />
 					)}
 				</ul>
 			</div>

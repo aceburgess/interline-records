@@ -9,7 +9,7 @@ import './main.scss';
 import Main from './containers/main';
 import Home from './components/home';
 import About from './components/about';
-import Artist from './components/artist';
+import MainContent from './components/main-content';
 // import InterlineModel from './model.js';
 
 const store = configureStore();

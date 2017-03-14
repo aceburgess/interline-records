@@ -43,8 +43,7 @@ class ArtistLinks extends Component {
 			var url = artistLinks[key];
 			var faClass = fontAwesomeClass[key];
 
-
-			if (typeof linkClass !== "undefined" && typeof url !== "undefined") {
+			if (typeof linkClass !== "undefined" && typeof url !== "undefined" && url.length > 0) {
 				link = this.artistLink(linkClass, url, faClass);		
 				links.push(link);
 			}

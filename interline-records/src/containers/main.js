@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions';
 import Home from '../components/home';
-import Artist from '../components/artist';
+import MainContent from '../components/main-content';
 import About from '../components/about';
 import ArtistDetail from '../components/artist-detail';
 import SiteModal from '../components/site-modal';
@@ -98,7 +98,7 @@ class Main extends Component {
 		return (
       <div id="fullpage">
       		<Home />
-      		<Artist selectArtist={this.props.actions.selectArtist} currentArtist={this.props.selectedArtist} artists={this.props.artists} />
+      		<MainContent {...this.props} />
       		<ArtistDetail artist={this.props.selectedArtist} artists={this.props.artists} />
       		<SiteModal modalState={this.props.modalState} />
 			</div>
@@ -110,7 +110,8 @@ function mapStateToProps(state) {
 	return {
     artists: state.artists.data,
     selectedArtist: state.artists.selectedArtist,
-    modalState: state.artists.modalState
+    modalState: state.general.modalState,
+    selectedSection: state.general.selectedSection
 	}
 }
 
