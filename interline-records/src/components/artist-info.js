@@ -8,11 +8,11 @@ class ArtistInfo extends Component {
 
 		return (
 			<div className="artist-info">
-				<ul>
-					<li>NEW VIDEO - Check out {artist.name + "'s"} latest music video BLAH BLAH</li>
-					<li>NEW ALBUM - Check out {artist.name + "'s"} new album</li>
-				</ul>
-				<h3 className="albums">ALBUMS</h3>
+				<div className="ai-logo-container">
+					<img className="ai-logo" src="/images/interline-logo.png" alt="#"/>
+				</div>
+				<p className="bio"><span className="artist-name">{artist.name}:</span>{artist.biography}</p>
+				<h3 className="albums"><i className="fa fa-music"></i></h3>
 				<ul>
 					<li>2013 - Dreamland</li>
 					<li>2011 - I Was Lost In Your Shadow</li>
@@ -20,13 +20,13 @@ class ArtistInfo extends Component {
 					<li>2007 - Lady Blue</li>
 					<p className="album">Check out more of {artist.name + "'s"} music @ Bandcamp & Soundcloud</p>
 				</ul>
-				<h3 className="videos">VIDEOS</h3>
+				<h3 className="videos"><i className="fa fa-film"></i></h3>
 				<ul>
-					<li><i className="fa fa-youtube fa-lg"></i> - Vos Vovles A Mi</li>
-					<li><i className="fa fa-vimeo fa-lg"></i> - Dreamland</li>
+					<li>Vos Vovles A Mi - <i className="fa fa-youtube fa-lg"></i></li>
+					<li>Dreamland - <i className="fa fa-vimeo fa-lg"></i></li>
 					<p className="videos">Check out more of {artist.name + "'s"} videos @ YouTube & Vimeo</p>
 				</ul>
-				<h3 className="contact">CONTACT</h3>
+				<h3 className="contact"><i className="fa fa-commenting-o"></i></h3>
 				<ul>
 					<li>Management: Interline Mangement</li>
 					<li>Contact: info@interlinerecords.com</li>
