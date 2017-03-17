@@ -11,8 +11,9 @@ class ArtistInfo extends Component {
 				<div className="ai-logo-container">
 					<img className="ai-logo" src="/images/interline-logo.png" alt="#"/>
 				</div>
+				<h3 className="about"><span className="title">ABOUT </span></h3>
 				<p className="bio"><span className="artist-name">{artist.name}:</span>{artist.biography}</p>
-				<h3 className="albums"><i className="fa fa-music"></i></h3>
+				<h3 className="albums"><span className="title">ALBUMS </span></h3>
 				<ul>
 					<li>2013 - Dreamland</li>
 					<li>2011 - I Was Lost In Your Shadow</li>
@@ -20,13 +21,13 @@ class ArtistInfo extends Component {
 					<li>2007 - Lady Blue</li>
 					<p className="album">Check out more of {artist.name + "'s"} music @ Bandcamp & Soundcloud</p>
 				</ul>
-				<h3 className="videos"><i className="fa fa-film"></i></h3>
+				<h3 className="videos"><span className="title">VIDEOS </span></h3>
 				<ul>
 					<li>Vos Vovles A Mi - <i className="fa fa-youtube fa-lg"></i></li>
 					<li>Dreamland - <i className="fa fa-vimeo fa-lg"></i></li>
 					<p className="videos">Check out more of {artist.name + "'s"} videos @ YouTube & Vimeo</p>
 				</ul>
-				<h3 className="contact"><i className="fa fa-commenting-o"></i></h3>
+				<h3 className="contact"><span className="title">CONTACT </span></h3>
 				<ul>
 					<li>Management: Interline Mangement</li>
 					<li>Contact: info@interlinerecords.com</li>
