@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import ItemList from './item-list';
 
 class ArtistInfo extends Component {
+
 
 	render(){
 
@@ -13,20 +15,8 @@ class ArtistInfo extends Component {
 				</div>
 				<h3 className="about"><span className="title">ABOUT </span></h3>
 				<p className="bio"><span className="artist-name">{artist.name}:</span>{artist.biography}</p>
-				<h3 className="albums"><span className="title">ALBUMS </span></h3>
-				<ul>
-					<li>2013 - Dreamland</li>
-					<li>2011 - I Was Lost In Your Shadow</li>
-					<li>2009 - The Nights Are All {"That's"} Left</li>
-					<li>2007 - Lady Blue</li>
-					<p className="album">Check out more of {artist.name + "'s"} music @ Bandcamp & Soundcloud</p>
-				</ul>
-				<h3 className="videos"><span className="title">VIDEOS </span></h3>
-				<ul>
-					<li>Vos Vovles A Mi - <i className="fa fa-youtube fa-lg"></i></li>
-					<li>Dreamland - <i className="fa fa-vimeo fa-lg"></i></li>
-					<p className="videos">Check out more of {artist.name + "'s"} videos @ YouTube & Vimeo</p>
-				</ul>
+				<ItemList artist={artist} items={artist.albums} itemType={'music'} />
+				<ItemList artist={artist} items={artist.videos} itemType={'videos'} />
 				<h3 className="contact"><span className="title">CONTACT </span></h3>
 				<ul>
 					<li>Management: Interline Mangement</li>

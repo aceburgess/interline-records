@@ -4,9 +4,18 @@ import AboutUs from './about-us';
 
 class ContentSection extends Component {
 
+	sortArtistsByLength(artists) {
+		if (artists.length > 0) {
+			return artists.sort(function(a,b){ return a.name.length - b.name.length; })
+		} else {
+			return artists;
+		}
+	}
+
 	render(){
 
-		var { selectedSection, selectArtist, artists } = this.props;
+		var { selectedSection, selectArtist, artists} = this.props;
+		artists = this.sortArtistsByLength(artists);
 
 	  switch (selectedSection) {
 	    case 'artist-list':

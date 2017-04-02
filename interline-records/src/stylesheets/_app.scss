@@ -331,32 +331,41 @@
 
 		}
 
-		ul {
-			padding-left: 0;
 
-			li {
-				list-style: none;
+	}
+	ul {
+		padding-left: 0;
 
-				i {
-					font-size: 1em;
-					padding-left: 0.2em;
-				}
-			}
-		}
+	}
+	li {
+		list-style: none;
 
-		p {
-			font-size: 0.9em;
-			font-weight: 300;
-			font-style: italic;
-			margin-top: 0.5em;
+		a {
+			color: $black;
 
-			span.artist-name {
+			&:hover {
+				text-decoration: none;
 				color: $red;
-				padding-right: 0.6em;
-				font-size: 1.1em;
 			}
 		}
 
+		i {
+			font-size: 1em;
+			padding-left: 0.2em;
+		}
+	}
+
+	p {
+		font-size: 0.9em;
+		font-weight: 300;
+		font-style: italic;
+		margin-top: 0.5em;
+
+		span.artist-name {
+			color: $red;
+			padding-right: 0.6em;
+			font-size: 1.1em;
+		}
 	}
 
 }
