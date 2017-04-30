@@ -10,9 +10,18 @@ import Main from './containers/main';
 import Home from './components/home';
 import About from './components/about';
 import MainContent from './components/main-content';
+
+import { initializeCurrentLocation, RouterProvider } from 'redux-little-router';
+
 // import InterlineModel from './model.js';
 
 const store = configureStore();
+
+const initialLocation = store.getState().router;
+
+if (initialLocation) {
+  store.dispatch(initializeCurrentLocation(initialLocation));
+}
 
 
 // render((
@@ -27,8 +36,11 @@ const store = configureStore();
 // );
 
 render((
-	<Provider store={store}>
-		<Main />
-	</Provider>),
+	<RouterProvider store={store}>
+		<Provider store={store}>
+			<Main />
+		</Provider>
+	</RouterProvider>
+	),
 	document.getElementById('interline-app')
 );

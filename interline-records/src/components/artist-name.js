@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'redux-little-router';
 
 
 class ArtistName extends Component {
@@ -15,9 +16,9 @@ class ArtistName extends Component {
 		var {artist} = this.props;
 		return (
 			<li onClick={this.selectArtist.bind(this)} className={"artist"}>
-				<a href="#thirdPage">
+				<Link href={'/artists/' + artist.slug}>
 					{artist.name}
-				</a>
+				</Link>
 			</li>
 		);
 	}

@@ -8,6 +8,8 @@ import About from '../components/about';
 import ArtistDetail from '../components/artist-detail';
 import SiteModal from '../components/site-modal';
 
+import {Fragment} from 'redux-little-router';
+
 class Main extends Component {
 
 	componentDidMount() {
@@ -96,22 +98,28 @@ class Main extends Component {
 	}
 	render() {
 		return (
-      <div id="fullpage">
-      		<Home />
-      		<MainContent {...this.props} />
-      		<ArtistDetail artist={this.props.selectedArtist} artists={this.props.artists} />
-      		<SiteModal modalState={this.props.modalState} />
-			</div>
+			<Fragment forRoute='/'>
+	      <div id="fullpage">
+	      		<Fragment forRoute='/'><Home /></Fragment>
+	      		<Fragment forRoute='/'><MainContent {...this.props} /></Fragment>
+	      		<Fragment forRoute='/'>
+		      		<ArtistDetail artist={this.props.selectedArtist} artists={this.props.artists} />
+	      		</Fragment>
+	      		<Fragment forRoute='/modal'>
+		      		<SiteModal modalState={this.props.modalState} />
+	      		</Fragment>
+				</div>
+			</Fragment>
 		);
 	}
 }
 
 function mapStateToProps(state) {
 	return {
-    artists: state.artists.data,
-    selectedArtist: state.artists.selectedArtist,
-    modalState: state.general.modalState,
-    selectedSection: state.general.selectedSection
+    artists: state.rootReducer.artists.data,
+    selectedArtist: state.rootReducer.artists.selectedArtist,
+    modalState: state.rootReducer.general.modalState,
+    selectedSection: state.rootReducer.general.selectedSection
 	}
 }
 
