@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ArtistList from './artist-list';
 import AboutUs from './about-us';
+import {Fragment} from 'redux-little-router';
 
 class ContentSection extends Component {
 

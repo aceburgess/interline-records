@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'redux-little-router';
 
 class NavigationItem extends Component {
 
@@ -18,7 +19,7 @@ class NavigationItem extends Component {
 
 		return (
 			<li className={this.addActiveClass()} >
-				<a key={section} className={ section + " nav-item"} onClick={this.selectSection.bind(this)} href="#">{title}</a>
+				<Link key={section} className={ section + " nav-item"} onClick={this.selectSection.bind(this)} href={section} >{title}</Link>
 			</li>
 			);
 	}

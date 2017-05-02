@@ -8,109 +8,88 @@ import About from '../components/about';
 import ArtistDetail from '../components/artist-detail';
 import SiteModal from '../components/site-modal';
 
-import {Fragment} from 'redux-little-router';
+import {Fragment, push, go, replace} from 'redux-little-router';
 
 class Main extends Component {
 
+	pathName: 'artists'
+
+	getPathName(){
+		this.pathName = location.pathname.split('/');
+	}
+
+	componentWillMount() {
+		this.getPathName();
+
+		window.loadingScreen = function(){
+			var loading = '<div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>'
+
+			var loadingScreen = pleaseWait({
+				logo: '/images/interline-logo.svg',
+				backgroundColor: '#ffff47',
+				loadingHtml: loading
+			})
+
+			return loadingScreen;
+		}
+	}
+
+	checkIfLoaded(thisLoadingScreen) {
+		var check = setInterval(function(){
+			if (thisLoadingScreen.loaded) {
+				thisLoadingScreen.finish();
+				clearInterval(check);
+			}
+		}, 500);
+	}
+
+	componentWillUpdate(nextProps, nextState) {
+		this.getPathName();
+	}
+
 	componentDidMount() {
 		this.props.actions.requestArtists();
-
-		$.modal.defaults = {
-		  closeExisting: true,    // Close existing modals. Set this to false if you need to stack multiple modal instances.
-		  escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
-		  clickClose: true,       // Allows the user to close the modal by clicking the overlay
-		  closeText: 'Close',     // Text content for the close <a> tag.
-		  closeClass: '',         // Add additional class(es) to the close <a> tag.
-		  showClose: false,        // Shows a (X) icon/link in the top-right corner
-		  modalClass: "modal",    // CSS class added to the element being displayed in the modal.
-		  spinnerHtml: null,      // HTML appended to the default spinner during AJAX requests.
-		  showSpinner: true,      // Enable/disable the default spinner during AJAX requests.
-		  fadeDuration: 800,     // Number of milliseconds the fade transition takes (null means no transition)
-		  fadeDelay: 0.5          // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
-		};
-
-	  $('#fullpage').fullpage({
-	    //Navigation
-	    menu: '#menu',
-	    lockAnchors: false,
-	    anchors:['firstPage', 'secondPage', 'thirdPage'],
-	    navigation: false,
-	    navigationPosition: 'bottom',
-	    navigationTooltips: ['firstSlide', 'secondSlide'],
-	    showActiveTooltip: false,
-	    slidesNavigation: true,
-	    slidesNavPosition: 'bottom',
-
-	    //Scrolling
-	    css3: true,
-	    scrollingSpeed: 800,
-	    autoScrolling: true,
-	    fitToSection: true,
-	    fitToSectionDelay: 0,
-	    scrollBar: false,
-	    easing: 'easeInOutCubic',
-	    easingcss3: 'ease',
-	    loopBottom: false,
-	    loopTop: false,
-	    loopHorizontal: true,
-	    continuousVertical: false,
-	    continuousHorizontal: false,
-	    scrollHorizontally: false,
-	    interlockedSlides: false,
-	    resetSliders: false,
-	    fadingEffect: false,
-	    normalScrollElements: '#element1, .element2',
-	    scrollOverflow: false,
-	    scrollOverflowOptions: null,
-	    touchSensitivity: 15,
-	    normalScrollElementTouchThreshold: 5,
-	    bigSectionsDestination: null,
-
-	    //Accessibility
-	    keyboardScrolling: true,
-	    animateAnchor: true,
-	    recordHistory: true,
-
-	    //Design
-	    controlArrows: false,
-	    // verticalCentered: false,
-	    // sectionsColor : ['#ccc', '#fff', '#ccc'],
-	    // paddingTop: '0em',
-	    // paddingBottom: '10px',
-	    // fixedElements: '#header, .footer',
-	    responsiveWidth: 0,
-	    responsiveHeight: 0,
-	    responsiveSlides: false,
-
-	    //Custom selectors
-	    sectionSelector: '.fullpage-section',
-	    slideSelector: '.fullpage-slide',
-
-	    //events
-	    onLeave: function(index, nextIndex, direction){},
-	    afterLoad: function(anchorLink, index){},
-	    afterRender: function(){},
-	    afterResize: function(){},
-	    afterResponsive: function(isResponsive){},
-	    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-	    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-	  });
 	}
+
 	render() {
-		return (
-			<Fragment forRoute='/'>
-	      <div id="fullpage">
-	      		<Fragment forRoute='/'><Home /></Fragment>
-	      		<Fragment forRoute='/'><MainContent {...this.props} /></Fragment>
-	      		<Fragment forRoute='/'>
-		      		<ArtistDetail artist={this.props.selectedArtist} artists={this.props.artists} />
-	      		</Fragment>
-	      		<Fragment forRoute='/modal'>
-		      		<SiteModal modalState={this.props.modalState} />
-	      		</Fragment>
-				</div>
-			</Fragment>
-		);
+
+		var loadingScreen = window.loadingScreen;
+		var checkIfLoaded = this.checkIfLoaded;
+
+	  switch (this.pathName[1]) {
+	    // case '':
+	    // 	push('/');
+	    //   return (
+	    //   	<Fragment forRoute='/'>
+	    //   		<Home />
+	    // 		</Fragment>
+	    //   )
+	    case '':
+	    	push('/');
+	      return (
+  				<Fragment forRoute='/'>
+  		  		<MainContent {...this.props} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="artist-list" />
+  				</Fragment>
+	      )
+      case 'about':
+      	push('/about');
+      	return (
+  				<Fragment forRoute='/about'>
+  		  		<MainContent {...this.props} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="about-us" />
+  				</Fragment>
+      	)
+    	case 'artist':
+    		push('/artist');
+    		return (
+  				<Fragment forRoute='/artist'>
+  		  		<ArtistDetail checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectArtist={this.props.actions.selectArtist} artist={this.props.selectedArtist} artists={this.props.artists} />
+  				</Fragment>
+    		)
+	    default:
+	      return (
+					<h1>Under Construction</h1>
+	      )
+    }
 	}
 }
 

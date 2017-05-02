@@ -8,17 +8,14 @@ export default function configureStore(initialState){
 	const routes = {
 		'/': {
 			title: 'Home',
-			'/landing': {
-				title: 'Landing'
-			},
-			'/main': {
-				title: 'Main'
+			'/about': {
+				title: 'About'
 			},
 			'/artists': {
-				title: 'Artists',
-				'/:artist-name': {
-					title: 'Artist Name'
-				}
+				title: 'Artists'
+			},
+			'/artist': {
+				title: 'Artist Name'
 			}
 		}
 	}

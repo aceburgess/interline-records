@@ -15,8 +15,8 @@ class ArtistName extends Component {
 	render(){
 		var {artist} = this.props;
 		return (
-			<li onClick={this.selectArtist.bind(this)} className={"artist"}>
-				<Link href={'/artists/' + artist.slug}>
+			<li onClick={this.selectArtist.bind(this)} id={artist.slug} className={"artist"}>
+				<Link href={'/artist/' + artist.slug}>
 					{artist.name}
 				</Link>
 			</li>

@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import {Link, push, go, replace} from 'redux-little-router';
 
 class Home extends Component {
+
+
+	componentDidMount() {
+		// setTimeout(function(){
+		// 	window.location.href = '/artists';
+		// },5000);
+	}
+
 	render(){
 		// const mainBackgroundStyle = {
 		// 	background: "url(" + "/images/new-york-matte.jpg" + ")",
@@ -9,8 +17,8 @@ class Home extends Component {
 		// }
 
     return (
-    	<div id="landing-page" className="fullpage-section">
-				<div className="container-fluid site-container lp-logo-container">
+    	<div id="landing-page" className="container-fluid site-container">
+				<div className="lp-logo-container">
 					<img className="lp-logo" src="/images/interline-logo.png" alt="#"/>
 				</div>
     	</div>

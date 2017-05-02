@@ -24,23 +24,12 @@ if (initialLocation) {
 }
 
 
-// render((
-// 	<Router history={browserHistory}>
-// 		<Route path="/" component={Main} history={browserHistory}>
-// 			<IndexRoute component={Home} />
-// 			<Route path="artists" component={Artist} />
-// 			<Route path="about" component={About} />
-// 		</Route>
-// 	</Router>),
-// 	document.getElementById('interline-app')
-// );
-
 render((
-	<RouterProvider store={store}>
-		<Provider store={store}>
+	<Provider store={store}>
+		<RouterProvider store={store}>
 			<Main />
-		</Provider>
-	</RouterProvider>
+		</RouterProvider>
+	</Provider>
 	),
 	document.getElementById('interline-app')
 );
