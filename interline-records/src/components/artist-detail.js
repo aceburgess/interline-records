@@ -71,13 +71,10 @@ class ArtistDetail extends Component {
 						<ArtistImage artist={artist} />
 					</div>
 					<div className="row">
-						<div className="col-md-1"></div>
-						<div className="col-md-3"><h2 className="ad-name">{artist.name}</h2></div>
-						<div className="col-md-3">
+						<div className="col-xs-3"><h2 className="ad-name">{artist.name}</h2></div>
+						<div className="col-xs-9">
 							<ArtistLinks artist={artist} />
 						</div>
-						<div className="col-md-4"></div>
-						<div className="col-md-1"></div>
 					</div>
 					<div className="row"></div>
 				</div>
