@@ -6,7 +6,6 @@ import Home from '../components/home';
 import MainContent from '../components/main-content';
 import About from '../components/about';
 import ArtistDetail from '../components/artist-detail';
-import SiteModal from '../components/site-modal';
 
 import {Fragment, push, go, replace} from 'redux-little-router';
 

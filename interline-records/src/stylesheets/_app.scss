@@ -196,30 +196,61 @@ html {
 
 	background: $white; /* Standard syntax */
 	background: url('/images/argentina-stars-invert.jpg') no-repeat center center;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 	color: $black;
 
 	width: 100%;
 	height: 100%;
-	position: relative;
+	// position: relative;
 
-	.ad-container {
-		position: absolute;
-		width: 100%;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+	// .ad-container {
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	top: 50%;
+	// 	transform: translateY(-50%);
+	// }
 
-	.ad-logo-container {
-		text-align: right;
-		padding-top: 2em;
-		.ad-logo {
-			max-width: 200px;
+
+	.ad-nav {
+		height: 3em;
+		margin-top: 1em;
+		// margin-bottom: 3em;
+		// position: relative;
+
+		.ad-logo-container {
+			text-align: center;
+
+			.ad-logo {
+				width: 200px;
+			}
+
+			// .ad-right {
+			// 	width: 100%;
+			// }
 		}
+
+		.ad-back {
+
+			i {
+				font-size: 2.1em;
+				opacity: 0.4;
+				padding-left: 0.5em;
+				// font-size: 1em;
+				// width: 100%;
+				// color: black;
+				// postion: fixed;
+				// top: 0; left: 0;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
 	}
 
 	.social-links {
@@ -270,7 +301,7 @@ html {
 
 
 	.ad-row {
-		height: 100%;
+		// height: 100%;
 
 		.artist-image {
 		  -webkit-background-size: cover;
@@ -281,8 +312,9 @@ html {
 			background-repeat: no-repeat;
 			overflow: hidden;
 			width: 100%;
-			height: 40em;
-			// height: 100%;
+			height: 100vh;
+			max-height: 80%;
+			position: relative;
 		}
 	}
 
@@ -333,54 +365,57 @@ html {
 	}
 
 	.artist-info {
-
-		.ai-logo-container {
-			text-align: right;
-			padding-bottom: 0.3em;
-
-			.ai-logo {
-				opacity: 0.9;
-				max-width: 200px;
-			}
-		}
-
+		position: absolute;
 		font-family: $sans-serif;
+		padding-left: 3%;
 		font-size: 1.1em;
-		color: $black;
+		color: $white;
+	  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.4)); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.4)); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.4)); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.4)); /* Standard syntax */
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
 
 		h3 {
-			font-family: $sans-serif;
-			font-size: 0.9em;
-			font-weight: 300;
+			font-family: $serif;
+			font-size: 1em;
+			font-weight: 100;
 			margin-top: 1.5em;
+			color: $white;
+			letter-spacing: 0.2em;
 
-			span.title {
-				color: $white;
-				background-color: $black;
-				padding: 0.2em;
-				padding-left: 0.7em;
-				padding-right: 0.7em;
-				border-radius: 0.3em;
-				opacity: 0.8;
-			}
+			// span.title {
+			// 	color: $white;
+			// 	background-color: $black;
+			// 	padding: 0.2em;
+			// 	padding-left: 0.7em;
+			// 	padding-right: 0.7em;
+			// 	border-radius: 0.3em;
+			// 	opacity: 0.8;
+			// }
 
 		}
 
 
 	}
+
 	ul {
 		padding-left: 0;
 
 	}
 	li {
 		list-style: none;
+		letter-spacing: 0.1em;
 
 		a {
-			color: $black;
+			color: $white;
 
 			&:hover {
 				text-decoration: none;
-				color: $red;
+				color: $white;
 			}
 		}
 
@@ -397,12 +432,13 @@ html {
 		margin-top: 0.5em;
 
 		span.artist-name {
-			color: $red;
+			color: $white;
 			padding-right: 0.6em;
 			font-size: 1.1em;
 		}
 	}
 }
+
 
 @media (max-width: 991px) {
 	.artist-page-logo-container, .side-nav {

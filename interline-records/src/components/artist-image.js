@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ArtistInfo from './artist-info.js';
 
 function backgroundStyle(url){
 	return {
@@ -16,7 +17,9 @@ class ArtistImage extends Component {
 		var {artist} = this.props;
 		return (
 			<div>
-				<div key={artist.name + '-photo'} style={backgroundStyle(artist.photo)} id={"artist-photo-" + artist.name} className="artist-image"></div>
+				<div key={artist.name + '-photo'} style={backgroundStyle(artist.photo)} id={"artist-photo-" + artist.name} className="artist-image">
+					<ArtistInfo artist={artist} />
+				</div>
 			</div>
 		);
 	}
