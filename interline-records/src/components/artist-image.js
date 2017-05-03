@@ -18,7 +18,6 @@ class ArtistImage extends Component {
 		return (
 			<div>
 				<div key={artist.name + '-photo'} style={backgroundStyle(artist.photo)} id={"artist-photo-" + artist.name} className="artist-image">
-					<ArtistInfo artist={artist} />
 				</div>
 			</div>
 		);

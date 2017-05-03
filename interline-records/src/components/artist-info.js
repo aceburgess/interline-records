@@ -10,15 +10,23 @@ class ArtistInfo extends Component {
 
 		return (
 			<div className="artist-info">
-				<h3 className="about"><span className="title">ABOUT </span></h3>
-				<p className="bio"><span className="artist-name">{artist.name}:</span>{artist.biography}</p>
-				<ItemList artist={artist} items={artist.albums} itemType={'music'} />
-				<ItemList artist={artist} items={artist.videos} itemType={'videos'} />
-				<h3 className="contact"><span className="title">CONTACT </span></h3>
-				<ul>
-					<li>Management: Interline Mangement</li>
-					<li>Contact: info@interlinerecords.com</li>
-				</ul>
+				<div className="row">
+					<div className="col-md-4">
+						<h3 className="about"><span className="title">ABOUT </span></h3>
+						<p className="bio"><span className="artist-name">{artist.name}:</span>{artist.biography}</p>
+					</div>
+					<div className="col-md-4">
+						<ItemList artist={artist} items={artist.albums} itemType={'music'} />
+					</div>
+					<div className="col-md-4">
+						<ItemList artist={artist} items={artist.videos} itemType={'videos'} />
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-md-12 contact">
+						<h5>Email us about {artist.name} @ {artist.contact_email}</h5>
+					</div>
+				</div>
 			</div>
 		)
 	}

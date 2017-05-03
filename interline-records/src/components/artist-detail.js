@@ -6,6 +6,7 @@ import {Link} from 'redux-little-router';
 
 class ArtistDetail extends Component {
 
+
 	getArtist(artists){
 		var artistSlug = location.pathname.split('/')[2];
 
@@ -71,12 +72,18 @@ class ArtistDetail extends Component {
 						<ArtistImage artist={artist} />
 					</div>
 					<div className="row">
-						<div className="col-xs-3"><h2 className="ad-name">{artist.name}</h2></div>
-						<div className="col-xs-9">
+						<div className="col-xs-1"></div>
+						<div className="col-xs-10"><h2 className="ad-name">{artist.name}</h2></div>
+						<div className="col-xs-1"></div>
+					</div>
+					<div className="row">
+						<div className="col-xs-12">
 							<ArtistLinks artist={artist} />
 						</div>
 					</div>
-					<div className="row"></div>
+					<div className="row">
+						<ArtistInfo artist={artist} />
+					</div>
 				</div>
 			</div>
 		)

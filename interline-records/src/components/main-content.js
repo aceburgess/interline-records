@@ -46,7 +46,7 @@ class MainContent extends Component {
 				<div className="mc-container">
 					<div className="row"></div>
 					<div className="row mc-row">
-						<div className="mc-nav-container col-md-4">
+						<div className="mc-nav-container col-sm-4">
 							<div className="mc-logo-container">
 								<img className="mc-logo" src="/images/interline-logo.png" alt="#"/>
 							</div>
@@ -58,12 +58,12 @@ class MainContent extends Component {
 								<li>Store</li>
 							</ul>
 						</div>
-						<div className="col-md-5">
+						<div className="col-sm-6">
 							<div className="mc-content-wrapper">
 								<ContentSection selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
 						</div>
-						<div className="col-md-3"></div>
+						<div className="col-sm-2"></div>
 					</div>
 					<div className="row"></div>
 				</div>
