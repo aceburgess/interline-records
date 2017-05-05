@@ -1,28 +1,37 @@
 import React, {Component} from 'react';
+import StaffCompany from './staff-company';
 
 class AboutUs extends Component {
 
 
 	render() {
+        var count = 0;
+
+        var { general } = this.props;
+        var siteSetting = general.sitesetting[0];
+        var staffMembers = general.staff;
+        var companies = general.company;
+
+        staffMembers.map( (staff) =>
+            console.log(staff)
+        )
 
 		return (
     	<div className="about-us" >
     		<h3>About Interline Records</h3>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor nisi, tincidunt vel nunc quis, pharetra faucibus quam. Pellentesque a turpis tellus. Phasellus varius rutrum tincidunt. Aliquam consectetur tortor vitae facilisis commodo. Praesent et porttitor nisi. In commodo tristique mauris sed finibus. Nam lectus massa, pretium vel sapien at, mollis laoreet felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices nullam.</p>
+    		<p>{siteSetting.about_us}</p>
     		<a href="#">Privacy Policy </a> | <a href="#"> Terms of Use</a>
     		<h3>Staff</h3>
     		<ul className="contact">
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>Ace Burgess: <span className="job-title">Owner / President</span></li>
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>Mia Min Yen: <span className="job-title">General Manager</span></li>
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>Joseph Knipskern: <span className="job-title">Sound Engineer</span></li>
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>Mor Mezrich: <span className="job-title">Sound Engineer</span></li>
+                {staffMembers.map( (staff) =>
+                    <StaffCompany key={count +=1} name={staff.first_name + ' ' + staff.last_name} link={'mailto:' + staff.email} description={staff.job_title} />
+                )}
     		</ul>
     		<h3>Other</h3>
     		<ul className="contact">
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>Shapiro Bernstein: <span className="job-title">Publishing</span></li>
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>Merlin: <span className="job-title">Distribution</span></li>
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>A2IM: <span className="job-title">American Association of Independent Music</span></li>
-    			<li><i className="fa fa-pencil" aria-hidden="true"></i>General Inquiries: <span className="job-title">info@interlinerecords.com</span></li>
+                {companies.map( (company) =>
+                    <StaffCompany type={'company'} key={count +=1} name={company.name} link={company.website} description={company.business_type}/>
+                )}
   			</ul>
     	</div>
 		)

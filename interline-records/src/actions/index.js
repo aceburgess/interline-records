@@ -1,5 +1,6 @@
 import request from 'superagent';
 
+export const REQUEST_GENERAL = 'REQUEST_GENERAL';
 export const REQUEST_ARTISTS = 'REQUEST_ARTISTS';
 export const SELECT_ARTIST = 'SELECT_ARTIST';
 export const CHANGE_MODAL = 'CHANGE_MODAL';
@@ -23,6 +24,16 @@ export function requestArtists(term = null) {
 	// console.log(term);
 	return {
 		type: REQUEST_ARTISTS,
+		payload: data
+	}
+}
+
+export function requestGeneral() {
+	const generalURL = API_URL + '/general/?format=json'
+	const data = request.get(generalURL).set(headersObject);
+
+	return {
+		type: REQUEST_GENERAL,
 		payload: data
 	}
 }

@@ -143,14 +143,21 @@ html {
 
 					li {
 						list-style: none;
+
+						a {
 						color: $red;
+
+							&:hover {
+								text-decoration: none;
+							}
+						}
 
 						.fa {
 							font-size: 0.6em;
 							padding-right: 0.5em;
 						}
 
-						.job-title {
+						.title {
 							color: $black;
 						}
 					}

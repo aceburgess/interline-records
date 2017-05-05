@@ -47,6 +47,7 @@ class Main extends Component {
 	}
 
 	componentDidMount() {
+		this.props.actions.requestGeneral();
 		this.props.actions.requestArtists();
 	}
 
@@ -95,6 +96,7 @@ class Main extends Component {
 function mapStateToProps(state) {
 	return {
     artists: state.rootReducer.artists.data,
+    general: state.rootReducer.general.data,
     selectedArtist: state.rootReducer.artists.selectedArtist,
     modalState: state.rootReducer.general.modalState,
     selectedSection: state.rootReducer.general.selectedSection
