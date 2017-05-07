@@ -25,6 +25,10 @@ class MainContent extends Component {
 		});
 	}
 
+	showMobileSection(){
+		console.log('yes');
+	}
+
 	noArtists(){
 		this.props.actions.selectSection('no-artists');
 	}
@@ -65,9 +69,18 @@ class MainContent extends Component {
 								<img className="mc-logo" src="/images/interline-logo.png" alt="#"/>
 							</div>
 							<ul className="mc-navigation">
-								<NavigationItem selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
-								<NavigationItem selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
+								<NavigationItem display={'desktop'} selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
+								<NavigationItem display={'desktop'} selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
 								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
+								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
+								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
+								<li><a href={siteSetting.store} target="_blank">Store</a></li>
+								<li><a onClick={this.mailingList} href="#">Mailing List</a></li>
+							</ul>
+							<ul className="mc-navigation-mobile">
+								<NavigationItem display={'mobile'} selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
+								<NavigationItem display={'mobile'} selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
+								<li><a href={siteSetting.facebook} target="_blank">SHITFacebook</a></li>
 								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
 								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
 								<li><a href={siteSetting.store} target="_blank">Store</a></li>
@@ -76,6 +89,9 @@ class MainContent extends Component {
 						</div>
 						<div className="col-sm-6">
 							<div className="mc-content-wrapper">
+								<ContentSection general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
+							</div>
+							<div className="mc-content-wrapper-mobile">
 								<ContentSection general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
 						</div>

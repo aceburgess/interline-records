@@ -75,7 +75,7 @@ html {
 			}
 		}
 
-		.mc-navigation {
+		.mc-navigation, .mc-navigation-mobile {
 			padding-top: 1em;
 			list-style: none;
 			text-align: right;
@@ -106,7 +106,7 @@ html {
 			}
 		}
 
-		.mc-content-wrapper {
+		.mc-content-wrapper, .mc-content-wrapper-mobile {
 			padding-left: 40px;
 			text-align: left;
 			font-family: $serif;
@@ -447,6 +447,10 @@ html {
 	}
 }
 
+.mc-content-wrapper-mobile, .mc-navigation-mobile {
+	display: none;
+}
+
 
 @media (max-width: 991px) {
 	.artist-page-logo-container, .side-nav {
@@ -454,5 +458,103 @@ html {
 	}
 	#main-page #main-logo {
 		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.mc-nav-container {
+    min-width: 35%;
+    max-width: 100% !important;
+    // min-height: 10%;
+	}
+
+	.mc-content-wrapper {
+		display: none;
+	}
+
+	.mc-content-wrapper-mobile {
+		padding-top: 5%;
+
+		.ap-artist-nav {
+			text-align: center;
+
+			.artist {
+				font-size: 0.6em;
+				padding-top: 0.1em;
+			}
+
+		}
+
+		// padding-left: 40px;
+		// text-align: left;
+		// font-family: $serif;
+		// color: $black;
+
+		h3 {
+			// font-weight: 300;
+			font-size: 1em !important;
+			border-bottom-style: solid;
+			margin-top: 0;
+			padding-bottom: 10px;
+			border-bottom-width: 1px;
+			border-bottom-color: rgba(0,0,0,0.1);
+			text-align: center !important;
+
+			&:not(:first-child) {
+				margin-top: 1em;
+			}
+		}
+
+		p {
+			font-family: $sans-serif;
+			text-align: justify;
+			font-size: 0.9em !important;
+		}
+
+		.about-us {
+			.other {
+				display: none !important;
+			}
+
+			.contact {
+				padding-left: 0;
+				font-size: 0.9em !important;
+				// font-weight: 300;
+				font-family: $sans-serif;
+				// letter-spacing: 0.1em;
+				line-height: 1.6em;
+
+				li {
+					// list-style: none;
+
+					a {
+					// color: $red;
+
+						&:hover {
+							// text-decoration: none;
+						}
+					}
+
+					.fa {
+						font-size: 0.4em !important;
+						padding-right: 0.5em;
+					}
+
+					.title {
+						color: $black;
+					}
+				}
+			}
+		}
+
+
+	}
+
+	.mc-navigation-mobile {
+		display: block !important;
+	}
+	.mc-navigation {
+		display: none;
 	}
 }

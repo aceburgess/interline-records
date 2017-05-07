@@ -21,14 +21,14 @@ class AboutUs extends Component {
     		<h3>About Interline Records</h3>
     		<p>{siteSetting.about_us}</p>
     		<a href="#">Privacy Policy </a> | <a href="#"> Terms of Use</a>
-    		<h3>Staff</h3>
-    		<ul className="contact">
+    		<h3 className="staff">Staff</h3>
+    		<ul className="contact staff">
                 {staffMembers.map( (staff) =>
                     <StaffCompany key={count +=1} name={staff.first_name + ' ' + staff.last_name} link={'mailto:' + staff.email} description={staff.job_title} />
                 )}
     		</ul>
-    		<h3>Other</h3>
-    		<ul className="contact">
+    		<h3 className="other">Other</h3>
+    		<ul className="contact other">
                 {companies.map( (company) =>
                     <StaffCompany type={'company'} key={count +=1} name={company.name} link={company.website} description={company.business_type}/>
                 )}

@@ -5,6 +5,10 @@ class NavigationItem extends Component {
 
 	selectSection(){
 		this.props.selectSection(this.props.section);
+		if (this.props.display == 'mobile') {
+			$('.mc-navigation-mobile').attr('style', 'display: none !important');
+			$('.mc-content-wrapper-mobile').show();
+		}
 	}
 
 	addActiveClass(){
