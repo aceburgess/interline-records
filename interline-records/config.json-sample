@@ -1,0 +1,5 @@
+{
+	"PORT": 3011,
+	"API_URL": "http://local-dev-application.com:8000",
+	"API_KEY": "Token 4ff75d8aba75195cd2c7a8629f075b87daf292de"
+}
