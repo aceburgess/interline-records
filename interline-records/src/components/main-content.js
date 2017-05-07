@@ -13,6 +13,18 @@ class MainContent extends Component {
 		{/*	<input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} /> */}
 	}
 
+	mailingList(e){
+		e.preventDefault();
+
+		vex.dialog.prompt({
+			unsafeMessage: '<h3>Subscribe to our mailing list</h3><p>Get pre-order info, discounts on music & events, and more from Interline Records!</p><br>',
+			placeholder: 'Email',
+			callback: function(value){
+				console.log(value);
+			}
+		});
+	}
+
 	noArtists(){
 		this.props.actions.selectSection('no-artists');
 	}
@@ -55,9 +67,11 @@ class MainContent extends Component {
 							<ul className="mc-navigation">
 								<NavigationItem selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
 								<NavigationItem selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
-								<li><a href={siteSetting.facebook}>Facebook</a></li>
-								<li><a href={siteSetting.twitter}>Twitter</a></li>
-								<li><a href={siteSetting.store}>Store</a></li>
+								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
+								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
+								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
+								<li><a href={siteSetting.store} target="_blank">Store</a></li>
+								<li><a onClick={this.mailingList} href="#">Mailing List</a></li>
 							</ul>
 						</div>
 						<div className="col-sm-6">
