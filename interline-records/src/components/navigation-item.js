@@ -8,6 +8,7 @@ class NavigationItem extends Component {
 		if (this.props.display == 'mobile') {
 			$('.mc-navigation-mobile').attr('style', 'display: none !important');
 			$('.mc-content-wrapper-mobile').show();
+			$('.mc-content-wrapper').hide();
 		}
 	}
 

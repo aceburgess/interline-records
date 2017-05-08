@@ -17,6 +17,18 @@ class Main extends Component {
 		this.pathName = location.pathname.split('/');
 	}
 
+	mailingList(e){
+		e.preventDefault();
+
+		vex.dialog.prompt({
+			unsafeMessage: '<h3>Subscribe to our mailing list</h3><p>Get pre-order info, discounts on music & events, and more from Interline Records!</p><br>',
+			placeholder: 'Email',
+			callback: function(value){
+				console.log(value);
+			}
+		});
+	}
+
 	componentWillMount() {
 		this.getPathName();
 
@@ -57,32 +69,25 @@ class Main extends Component {
 		var checkIfLoaded = this.checkIfLoaded;
 
 	  switch (this.pathName[1]) {
-	    // case '':
-	    // 	push('/');
-	    //   return (
-	    //   	<Fragment forRoute='/'>
-	    //   		<Home />
-	    // 		</Fragment>
-	    //   )
 	    case '':
 	    	push('/');
 	      return (
   				<Fragment forRoute='/'>
-  		  		<MainContent {...this.props} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="artist-list" />
+  		  		<MainContent {...this.props} mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="artist-list" />
   				</Fragment>
 	      )
       case 'about':
       	push('/about');
       	return (
   				<Fragment forRoute='/about'>
-  		  		<MainContent {...this.props} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="about-us" />
+  		  		<MainContent {...this.props} mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="about-us" />
   				</Fragment>
       	)
     	case 'artist':
     		push('/artist');
     		return (
   				<Fragment forRoute='/artist'>
-  		  		<ArtistDetail checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectArtist={this.props.actions.selectArtist} artist={this.props.selectedArtist} artists={this.props.artists} />
+  		  		<ArtistDetail mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectArtist={this.props.actions.selectArtist} artist={this.props.selectedArtist} artists={this.props.artists} />
   				</Fragment>
     		)
 	    default:

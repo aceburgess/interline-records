@@ -19,10 +19,6 @@ class ArtistDetail extends Component {
 		// return 'no artist';
 	}
 
-	goBack() {
-		window.history.back();
-	}
-
 	shouldComponentUpdate(nextProps, nextState) {
 		if (this.props.artists != nextProps.artists) {
 			this.getArtist(nextProps.artists);
@@ -36,6 +32,7 @@ class ArtistDetail extends Component {
 
 	componentDidMount() {
 		this.props.checkIfLoaded(window.thisLoadingScreen);
+		setTimeout(function(){ $('#mailing-list-pop-up')[0].click(); }, 10000);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
@@ -44,7 +41,7 @@ class ArtistDetail extends Component {
 
 	render(){
 
-		var {artist, artists} = this.props;
+		var {artist, artists, mailingList} = this.props;
 
 		// if (artist.name == 'NONE') {
 		// 	this.getArtist(artists);
@@ -58,9 +55,11 @@ class ArtistDetail extends Component {
 			<div id="artist-detail-page" className="container-fluid site-container">
 				<div className="ad-container">
 					<div className="row ad-nav">
-						<div onClick={this.goBack} className="ad-back col-xs-1">
-							<i className="fa fa-chevron-circle-left" aria-hidden="true"></i>
-						</div>
+						<a href="/">
+							<div className="ad-back col-xs-1">
+								<i className="fa fa-chevron-circle-left fa-4x" aria-hidden="true"></i>
+							</div>
+						</a>
 						<div className="ad-logo-container col-xs-10">
 							<Link key={'/'} href={'/'}>
 								<img className="ad-logo" src="/images/interline-logo.svg" alt="#"/>

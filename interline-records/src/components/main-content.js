@@ -7,24 +7,6 @@ import NavigationItem from './navigation-item';
 
 class MainContent extends Component {
 
-	onInputChange(term) {
-		console.log(term);
-		// this.props.getArtists(term);
-		{/*	<input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} /> */}
-	}
-
-	mailingList(e){
-		e.preventDefault();
-
-		vex.dialog.prompt({
-			unsafeMessage: '<h3>Subscribe to our mailing list</h3><p>Get pre-order info, discounts on music & events, and more from Interline Records!</p><br>',
-			placeholder: 'Email',
-			callback: function(value){
-				console.log(value);
-			}
-		});
-	}
-
 	showMobileSection(){
 		console.log('yes');
 	}
@@ -46,6 +28,9 @@ class MainContent extends Component {
 
 	componentDidMount() {
 		this.props.checkIfLoaded(window.thisLoadingScreen);
+		// var mailingList = this.props.mailingList
+
+		setTimeout(function(){ $('#mailing-list-pop-up')[0].click(); }, 15000);
 	}
 
 	componentDidUpdate() {
@@ -54,7 +39,7 @@ class MainContent extends Component {
 
   render(){
 
-  	var { artists, selectedArtist, selectedSection, general } = this.props;
+  	var { artists, selectedArtist, selectedSection, general, mailingList } = this.props;
   	var { selectSection, selectArtist, changeModal } = this.props.actions;
 
   	var siteSetting = general.sitesetting[0];
@@ -66,25 +51,28 @@ class MainContent extends Component {
 					<div className="row mc-row">
 						<div className="mc-nav-container col-sm-4">
 							<div className="mc-logo-container">
-								<img className="mc-logo" src="/images/interline-logo.png" alt="#"/>
+								<a href="/">
+									<img className="mc-logo" src="/images/interline-logo.png" alt="#"/>
+								</a>
 							</div>
-							<ul className="mc-navigation">
+							<ul className='mc-navigation'>
 								<NavigationItem display={'desktop'} selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
 								<NavigationItem display={'desktop'} selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
 								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
 								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
 								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
 								<li><a href={siteSetting.store} target="_blank">Store</a></li>
-								<li><a onClick={this.mailingList} href="#">Mailing List</a></li>
+								<li><a id='mailing-list-pop-up' onClick={mailingList} href="#">Mailing List</a></li>
 							</ul>
-							<ul className="mc-navigation-mobile">
+							<a href='/' className='mc-back-to-menu-mobile' style={{display: 'none'}}><p>BACK TO MENU</p></a>
+							<ul className='mc-navigation-mobile'>
 								<NavigationItem display={'mobile'} selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
 								<NavigationItem display={'mobile'} selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
-								<li><a href={siteSetting.facebook} target="_blank">SHITFacebook</a></li>
+								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
 								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
 								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
 								<li><a href={siteSetting.store} target="_blank">Store</a></li>
-								<li><a onClick={this.mailingList} href="#">Mailing List</a></li>
+								<li><a onClick={mailingList} href="#">Mailing List</a></li>
 							</ul>
 						</div>
 						<div className="col-sm-6">
@@ -95,7 +83,7 @@ class MainContent extends Component {
 								<ContentSection general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
 						</div>
-						<div className="col-sm-2"></div>
+						<div className="col-md-2"></div>
 					</div>
 					<div className="row"></div>
 				</div>

@@ -9,6 +9,22 @@ const app = express();
 
 app.use(express.static(__dirname + '/public'));
 
+app.get('/mailing-list/add', function(req, res){
+	var headersObject = {'content-type': 'application/json'};
+	var emailObject = {
+		"email_address": req.query.email,
+		"status": "pending"
+	}
+	const URL = config.MAILCHIMP_API_URL + '/lists/' + config.MAILCHIMP_LIST_ID + '/members';
+	const data = request.post(URL).auth('api_key:' + config.MAILCHIMP_API_KEY).set(headersObject).send(emailObject).end(function(error, response){
+		if (error || !response.ok) {
+			res.json(error);
+		} else {
+			res.json(response);
+		}
+	})
+})
+
 app.get('/interline-api/artists', function(req, res){
 	var headersObject = {'Authorization': API_KEY};
 	const artistURL = API_URL + '/artists/?format=json'
