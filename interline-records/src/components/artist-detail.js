@@ -19,6 +19,11 @@ class ArtistDetail extends Component {
 		// return 'no artist';
 	}
 
+	thisMailingList(e) {
+		e.preventDefault();
+		this.props.mailingList(this.props.actions.addToMailingList);
+	}
+
 	shouldComponentUpdate(nextProps, nextState) {
 		if (this.props.artists != nextProps.artists) {
 			this.getArtist(nextProps.artists);
@@ -32,7 +37,14 @@ class ArtistDetail extends Component {
 
 	componentDidMount() {
 		this.props.checkIfLoaded(window.thisLoadingScreen);
-		setTimeout(function(){ $('#mailing-list-pop-up')[0].click(); }, 10000);
+
+		setTimeout(function(){ 
+			if(sessionStorage.mailingList != 'opened') {
+				$('#mailing-list-pop-up')[0].click(); 
+			} else {
+				console.log('Already shown');
+			}
+		}, 13000);
 	}
 
 	componentDidUpdate(prevProps, prevState) {
@@ -81,7 +93,7 @@ class ArtistDetail extends Component {
 						</div>
 					</div>
 					<div className="row">
-						<ArtistInfo artist={artist} />
+						<ArtistInfo {...this.props} artist={artist} />
 					</div>
 				</div>
 			</div>

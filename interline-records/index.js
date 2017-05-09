@@ -9,18 +9,18 @@ const app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/mailing-list/add', function(req, res){
+app.post('/mailing-list/add', function(req, res){
 	var headersObject = {'content-type': 'application/json'};
 	var emailObject = {
 		"email_address": req.query.email,
-		"status": "pending"
+		"status": "subscribed"
 	}
 	const URL = config.MAILCHIMP_API_URL + '/lists/' + config.MAILCHIMP_LIST_ID + '/members';
 	const data = request.post(URL).auth('api_key:' + config.MAILCHIMP_API_KEY).set(headersObject).send(emailObject).end(function(error, response){
 		if (error || !response.ok) {
-			res.json(error);
+			res.send('Sorry, but we tried subscribing you, and it seems you may already be a subscriber or your email is not valid.');
 		} else {
-			res.json(response);
+			res.send('Thanks for subscribing!');
 		}
 	})
 })

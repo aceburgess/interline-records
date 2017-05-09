@@ -17,14 +17,23 @@ class Main extends Component {
 		this.pathName = location.pathname.split('/');
 	}
 
-	mailingList(e){
-		e.preventDefault();
+	mailingList(addToMailingList){
+		// e.preventDefault();
+		sessionStorage.mailingList = "opened";
 
 		vex.dialog.prompt({
 			unsafeMessage: '<h3>Subscribe to our mailing list</h3><p>Get pre-order info, discounts on music & events, and more from Interline Records!</p><br>',
-			placeholder: 'Email',
+			placeholder: 'Email Address',
 			callback: function(value){
-				console.log(value);
+				if (value) {
+					var response = addToMailingList(value);
+					response.then(function(res, error){
+						setTimeout(function(){vex.dialog.alert(res.payload.text)},1500);
+						return true;
+					})
+				} else {
+					console.log('Closing');
+				}
 			}
 		});
 	}
@@ -87,7 +96,7 @@ class Main extends Component {
     		push('/artist');
     		return (
   				<Fragment forRoute='/artist'>
-  		  		<ArtistDetail mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectArtist={this.props.actions.selectArtist} artist={this.props.selectedArtist} artists={this.props.artists} />
+  		  		<ArtistDetail {...this.props} mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectArtist={this.props.actions.selectArtist} artist={this.props.selectedArtist} artists={this.props.artists} />
   				</Fragment>
     		)
 	    default:

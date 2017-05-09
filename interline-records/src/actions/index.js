@@ -5,6 +5,7 @@ export const REQUEST_ARTISTS = 'REQUEST_ARTISTS';
 export const SELECT_ARTIST = 'SELECT_ARTIST';
 export const CHANGE_MODAL = 'CHANGE_MODAL';
 export const SELECT_SECTION = 'SELECT_SECTION';
+export const ADD_TO_MAILING_LIST = 'ADD_TO_MAILING_LIST';
 
 export function requestArtists(term = null) {
 	const data = request.get('/interline-api/artists')
@@ -42,5 +43,14 @@ export function selectSection(selectedSection) {
 	return {
 		type: SELECT_SECTION,
 		payload: selectedSection
+	}
+}
+
+export function addToMailingList(email) {
+	const response = request.post('/mailing-list/add?email=' + email)
+
+	return {
+		type: ADD_TO_MAILING_LIST,
+		payload: response
 	}
 }

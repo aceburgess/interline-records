@@ -1,4 +1,4 @@
-import { REQUEST_GENERAL, CHANGE_MODAL, SELECT_SECTION } from '../actions';
+import { REQUEST_GENERAL, CHANGE_MODAL, SELECT_SECTION, ADD_TO_MAILING_LIST } from '../actions';
 
 const initialState = {
   data: {
@@ -10,7 +10,8 @@ const initialState = {
     title: 'About Us',
     content: 'Started in 2011 in Harlem, NYC. Now based in Brooklyn NY. Working with great artists accross the globe in various genres.'
   },
-  selectedSection: 'no-artists'
+  selectedSection: 'no-artists',
+  addToMailingList: {}
 };
 
 
@@ -27,6 +28,10 @@ export default function general(state = initialState, action) {
     case SELECT_SECTION:
       return Object.assign({}, state, {
         selectedSection: action.payload
+      })
+    case ADD_TO_MAILING_LIST:
+      return Object.assign({}, state, {
+        addToMailingList: action.payload
       })
     default:
       return state;

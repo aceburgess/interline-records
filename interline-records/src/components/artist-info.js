@@ -3,6 +3,11 @@ import ItemList from './item-list';
 
 class ArtistInfo extends Component {
 
+	thisMailingList(e) {
+		e.preventDefault();
+		this.props.mailingList(this.props.actions.addToMailingList);
+	}
+
 
 	render(){
 
@@ -25,6 +30,7 @@ class ArtistInfo extends Component {
 				<div className="row">
 					<div className="col-md-12 contact">
 						<h5>Email us about {artist.name} @ {artist.contact_email}</h5>
+						<a id='mailing-list-pop-up' onClick={this.thisMailingList.bind(this)} href="#"><h5>Join Our Mailing List</h5></a>
 					</div>
 				</div>
 			</div>
