@@ -11,7 +11,6 @@ class ArtistDetail extends Component {
 		var artistSlug = location.pathname.split('/')[2];
 
 		for (var key in artists) {
-				console.log('happening');
 			if (artistSlug == artists[key].slug){
 				this.props.selectArtist(artists[key]);
 			}

@@ -15,7 +15,7 @@ class ContentSection extends Component {
 
 	render(){
 
-		var { selectedSection, selectArtist, artists, general} = this.props;
+		var { selectedSection, selectArtist, artists, general, contact} = this.props;
 		artists = this.sortArtistsByLength(artists);
 
 	  switch (selectedSection) {
@@ -25,7 +25,7 @@ class ContentSection extends Component {
 	      )
 	    case 'about-us':
 	      return (
-	      	<AboutUs general={general} />
+	      	<AboutUs contact={contact} general={general} />
 	      )
 	    default:
 	      return (

@@ -25,11 +25,11 @@ class MainContent extends Component {
 		var sitesetting = this.props.general.sitesetting[0];
 		var message = "<h4>" + sitesetting.contact_name + "</h4><p>" + sitesetting.contact_email + "</p><h4>Demos</h4><p>" + sitesetting.demo_email + "</p><br>";
 
-		vex.dialog.confirm({
-			unsafeMessage: message,
-			callback: function(value){
-				console.log(value);
-			}
+		vex.dialog.alert({
+			unsafeMessage: message
+			// callback: function(value){
+			// 	console.log(value);
+			// }
 		})
 	}
 
@@ -82,35 +82,40 @@ class MainContent extends Component {
 							<ul className='mc-navigation'>
 								<NavigationItem display={'desktop'} selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
 								<NavigationItem display={'desktop'} selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
+								<li><a id='mailing-list-pop-up' onClick={this.thisMailingList.bind(this)} href="#">Mailing List</a></li>
+								<li><a href='https://news.interlinerecords.com' target="_blank">News / Blog</a></li>
 								<li><a onClick={this.openContact.bind(this)} href='#'>Contact</a></li>
-								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
-								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
+								<li><a href={siteSetting.store} target="_blank">Store</a></li>
+								<br/>
 								<li><a href={siteSetting.soundcloud} target="_blank">Soundcloud</a></li>
+								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
+								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
 								<li><a href={siteSetting.youtube} target="_blank">YouTube</a></li>
 								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
-								<li><a href={siteSetting.store} target="_blank">Store</a></li>
-								<li><a id='mailing-list-pop-up' onClick={this.thisMailingList.bind(this)} href="#">Mailing List</a></li>
 							</ul>
 							<a href='/' className='mc-back-to-menu-mobile' style={{display: 'none'}}><p>BACK TO MENU</p></a>
 							<ul className='mc-navigation-mobile'>
 								<NavigationItem display={'mobile'} selectedSection={selectedSection} selectArtist={selectArtist} selectSection={selectSection} title="Artists" section="/" />
 								<NavigationItem display={'mobile'} selectedSection={selectedSection} selectSection={selectSection} title="About Us" section="/about" />
+								<li><a onClick={this.thisMailingList.bind(this)} href="#">Mailing List</a></li>
+								<li><a href='https://news.interlinerecords.com' target="_blank">News / Blog</a></li>
 								<li><a onClick={this.openContact.bind(this)} href='#'>Contact</a></li>
-								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
-								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
+								<li><a href={siteSetting.store} target="_blank">Store</a></li>
+								<br/>
 								<li><a href={siteSetting.soundcloud} target="_blank">Soundcloud</a></li>
+								<li><a href={siteSetting.instagram} target="_blank">Instagram</a></li>
+								<li><a href={siteSetting.facebook} target="_blank">Facebook</a></li>
 								<li><a href={siteSetting.youtube} target="_blank">YouTube</a></li>
 								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
-								<li><a href={siteSetting.store} target="_blank">Store</a></li>
-								<li><a onClick={this.thisMailingList.bind(this)} href="#">Mailing List</a></li>
 							</ul>
+							<p className='copyright' >&copy; {new Date().getFullYear()} Interline Group, LLC</p>
 						</div>
 						<div className="col-sm-6">
 							<div className="mc-content-wrapper">
-								<ContentSection general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
+								<ContentSection contact={this.openContact} general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
 							<div className="mc-content-wrapper-mobile">
-								<ContentSection general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
+								<ContentSection contact={this.openContact} general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
 						</div>
 						<div className="col-md-2"></div>

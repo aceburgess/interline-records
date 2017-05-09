@@ -7,14 +7,10 @@ class AboutUs extends Component {
 	render() {
         var count = 0;
 
-        var { general } = this.props;
+        var { general, contact } = this.props;
         var siteSetting = general.sitesetting[0];
         var staffMembers = general.staff;
         var companies = general.company;
-
-        staffMembers.map( (staff) =>
-            console.log(staff)
-        )
 
 		return (
     	<div className="about-us" >
@@ -24,13 +20,13 @@ class AboutUs extends Component {
     		<h3 className="staff">Staff</h3>
     		<ul className="contact staff">
                 {staffMembers.map( (staff) =>
-                    <StaffCompany key={count +=1} name={staff.first_name + ' ' + staff.last_name} link={'mailto:' + staff.email} description={staff.job_title} />
+                    <StaffCompany general={general} key={count +=1} name={staff.first_name + ' ' + staff.last_name} contact={contact} link={'#'} description={staff.job_title} />
                 )}
     		</ul>
     		<h3 className="other">Other</h3>
     		<ul className="contact other">
                 {companies.map( (company) =>
-                    <StaffCompany type={'company'} key={count +=1} name={company.name} link={company.website} description={company.business_type}/>
+                    <StaffCompany general={general} type={'company'} key={count +=1} name={company.name} contact={function(){return true;}} link={company.website} description={company.business_type}/>
                 )}
   			</ul>
     	</div>
