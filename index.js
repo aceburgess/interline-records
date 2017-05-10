@@ -46,5 +46,8 @@ app.get('*', function(req, res){
 });
 
 
-app.listen(port);
-console.log('server started on port' + port);
+var server = app.listen(port, function(){
+
+	console.log('Server started on port ' + server.address().port);
+	
+});

@@ -23,15 +23,7 @@ var config = {
 			  loaders: ["style-loader", "css-loader", "sass-loader"]
 			}
 		]
-	},
-	plugins: [
-		new webpack.DefinePlugin({
-			'process env': {
-				'API_URL': process.env.API_URL,
-				'API_KEY': process.env.API_KEY
-			}
-		})
-	]
+	}
 };
 
 module.exports = config;

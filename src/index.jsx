@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 //ROUTES
-import {Router, Route, IndexRoute, hashHistory, browserHistory, Link} from 'react-router';
+// import {Router, Route, IndexRoute, hashHistory, browserHistory, Link} from 'react-router';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import './main.scss';
