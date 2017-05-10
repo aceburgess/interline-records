@@ -1,5 +1,8 @@
 {
 	"PORT": 3011,
 	"API_URL": "http://local-dev-application.com:8000",
-	"API_KEY": "Token 4ff75d8aba75195cd2c7a8629f075b87daf292de"
+	"API_KEY": "Token 4ff75d8aba75195cd2c7a8629f075b87daf292de",
+	"MAILCHIMP_API_URL": "https://us15.api.mailchimp.com/3.0",
+	"MAILCHIMP_API_KEY": "adb63954fdbb9ac75df6a6170ee20d7c-us15",
+	"MAILCHIMP_LIST_ID": "4b1c460255"
 }
