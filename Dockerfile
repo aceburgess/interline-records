@@ -1,9 +1,8 @@
-FROM node:7.10.0
+FROM node:7.10-alpine
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /src
 
-COPY package.json /usr/src/app/
-RUN npm upgrade -g npm
-RUN npm install -g && npm cache clean
-COPY . /usr/src/app
+COPY package.json .
+RUN npm install
+
+COPY . .

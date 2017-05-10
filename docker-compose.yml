@@ -7,14 +7,14 @@ services:
     expose:
       - "3011"
     volumes:
-      - /usr/src/app/public:/usr/src/app/public:rw
+      - /usr/src/app/public:/src/public:rw
     env_file: .env
     environment:
       - VIRTUAL_HOST=interline.in,www.interline.in
       - LETSENCRYPT_HOST=interline.in,www.interline.in
       - LETSENCRYPT_EMAIL=info@interline.in
       - LETSENCRYPT_TEST=true
-    command: /usr/src/app/startup.sh
+    command: /src/startup.sh
     networks:
       - proxy
       - default
