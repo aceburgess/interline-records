@@ -18,11 +18,7 @@
     "webpack": "^2.2.1",
     "contentBase": "/",
     "devtool": "eval",
-    "hot": true,
-    "inline": true,
-    "port": 3000,
-    "outputPath": "buildPath",
-    "historyApiFallback": true
+    "outputPath": "buildPath"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -42,5 +38,13 @@
     "sass-loader": "^5.0.1",
     "style-loader": "^0.13.1",
     "superagent": "^3.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aceburgess/interline-records.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aceburgess/interline-records/issues"
+  },
+  "homepage": "https://github.com/aceburgess/interline-records#readme"
 }
