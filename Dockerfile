@@ -1,8 +1,13 @@
-FROM node:7.10-alpine
+FROM node:7.10
 
-WORKDIR /src
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-COPY package.json .
-RUN npm install
+# Install app dependencies
+COPY package.json /usr/src/app/
+COPY yarn.lock /usr/src/app/
+RUN yarn
 
-COPY . .
+# Bundle app source
+COPY . /usr/src/app
