@@ -14,11 +14,11 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
-    "serve": "^1.4.0",
-    "webpack": "^2.2.1",
     "contentBase": "/",
     "devtool": "eval",
-    "outputPath": "buildPath"
+    "outputPath": "buildPath",
+    "serve": "^1.4.0",
+    "webpack": "^2.2.1"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -39,10 +39,7 @@
     "style-loader": "^0.13.1",
     "superagent": "^3.4.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aceburgess/interline-records.git"
-  },
+  "repository": "git+https://github.com/aceburgess/interline-records.git",
   "bugs": {
     "url": "https://github.com/aceburgess/interline-records/issues"
   },

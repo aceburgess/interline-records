@@ -1,3 +1,5 @@
 #!/bin/sh
 
-npm start
+which npm
+
+/usr/local/npm start
