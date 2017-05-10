@@ -6,35 +6,18 @@ services:
     build: .
     expose:
       - "3011"
-    links:
-      - postgres:postgres
-    depends_on:
-      - "postgres"
     volumes:
-      - /usr/src/app/media:/usr/src/app/media:rw
-      - /usr/src/app/static:/usr/src/app/static:rw
+      - /usr/src/app/public:/usr/src/app/public:rw
     env_file: .env
     environment:
-      - VIRTUAL_HOST=seenonvhs.com,www.seenonvhs.com
-      - LETSENCRYPT_HOST=seenonvhs.com,www.seenonvhs.com
-      - LETSENCRYPT_EMAIL=mail@seenonvhs.com
-      - LETSENCRYPT_TEST=false
-    # command: ls -all
+      - VIRTUAL_HOST=interline.in,www.interline.in
+      - LETSENCRYPT_HOST=interline.in,www.interline.in
+      - LETSENCRYPT_EMAIL=info@interline.in
+      - LETSENCRYPT_TEST=true
     command: /usr/src/app/startup.sh
     networks:
       - proxy
       - default
-
-  postgres:
-    restart: always
-    image: postgres:latest
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data/
-
-volumes:
-  pgdata:
 
 networks:
   proxy:
