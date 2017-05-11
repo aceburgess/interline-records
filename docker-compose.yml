@@ -6,7 +6,7 @@ services:
     build: .
     expose:
       - "3011"
-    volumes:
+    # volumes:
       # - /usr/src/app/public:/usr/src/app/public:ro
     environment:
       - VIRTUAL_HOST=interline.in,www.interline.in
