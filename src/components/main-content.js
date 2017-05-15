@@ -108,7 +108,7 @@ class MainContent extends Component {
 								<li><a href={siteSetting.youtube} target="_blank">YouTube</a></li>
 								<li><a href={siteSetting.twitter} target="_blank">Twitter</a></li>
 							</ul>
-							<p className='copyright' >&copy; {new Date().getFullYear()} Interline Group, LLC</p>
+							<p className='copyright desktop' >&copy; {new Date().getFullYear()} Interline Group, LLC</p>
 						</div>
 						<div className="col-sm-6">
 							<div className="mc-content-wrapper">
@@ -117,6 +117,7 @@ class MainContent extends Component {
 							<div className="mc-content-wrapper-mobile">
 								<ContentSection contact={this.openContact} general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
+							<p className='copyright mobile' >&copy; {new Date().getFullYear()} Interline Group, LLC</p>
 						</div>
 						<div className="col-md-2"></div>
 					</div>

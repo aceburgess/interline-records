@@ -16,7 +16,7 @@ class AboutUs extends Component {
     	<div className="about-us" >
     		<h3>About Interline Records</h3>
     		<p>{siteSetting.about_us}</p>
-    		<a href="#">Privacy Policy </a> | <a href="#"> Terms of Use</a>
+    		<a href="/privacy">Terms of Service + Privacy</a>
     		<h3 className="staff">Staff</h3>
     		<ul className="contact staff">
                 {staffMembers.map( (staff) =>

@@ -18,6 +18,14 @@ class ArtistDetail extends Component {
 		// return 'no artist';
 	}
 
+	artistName(artist){
+		if (!!artist.website) {
+			return <h2 className="ad-name"><a href={artist.website}>{artist.name}</a></h2>;
+		} else {
+			return <h2 className="ad-name">{artist.name}</h2>;
+		}
+	}
+
 	thisMailingList(e) {
 		e.preventDefault();
 		this.props.mailingList(this.props.actions.addToMailingList);
@@ -83,7 +91,7 @@ class ArtistDetail extends Component {
 					</div>
 					<div className="row">
 						<div className="col-xs-1"></div>
-						<div className="col-xs-10"><h2 className="ad-name">{artist.name}</h2></div>
+						<div className="col-xs-10">{this.artistName(artist)}</div>
 						<div className="col-xs-1"></div>
 					</div>
 					<div className="row">

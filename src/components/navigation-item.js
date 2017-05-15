@@ -9,6 +9,8 @@ class NavigationItem extends Component {
 			$('.mc-navigation-mobile').attr('style', 'display: none !important');
 			$('.mc-content-wrapper-mobile').show();
 			$('.mc-content-wrapper').hide();
+			$('.copyright.desktop').hide();
+			$('.copyright.mobile').show();
 		}
 	}
 

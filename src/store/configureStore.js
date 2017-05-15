@@ -16,6 +16,9 @@ export default function configureStore(initialState){
 			},
 			'/artist': {
 				title: 'Artist Name'
+			},
+			'/privacy': {
+				title: 'Privacy Policy and Terms of Service'
 			}
 		}
 	}

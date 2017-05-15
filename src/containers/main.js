@@ -6,6 +6,7 @@ import Home from '../components/home';
 import MainContent from '../components/main-content';
 import About from '../components/about';
 import ArtistDetail from '../components/artist-detail';
+import Privacy from '../components/privacy';
 
 import {Fragment, push, go, replace} from 'redux-little-router';
 
@@ -98,6 +99,13 @@ class Main extends Component {
   				<Fragment forRoute='/artist'>
   		  		<ArtistDetail {...this.props} mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectArtist={this.props.actions.selectArtist} artist={this.props.selectedArtist} artists={this.props.artists} />
   				</Fragment>
+    		)
+    	case 'privacy':
+    		push('/privacy');
+    		return (
+    			<Fragment forRoute='/privacy'>
+    				<Privacy />
+    			</Fragment>
     		)
 	    default:
 	      return (

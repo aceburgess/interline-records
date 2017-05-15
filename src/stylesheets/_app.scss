@@ -338,16 +338,21 @@ html {
 		text-align: center;
 		padding-top: 0.2em;
 		padding-bottom: 0.2em;
+
+		a {
+			text-decoration: none;
+			color: $black;
+		}
 		// border-top-style: solid;
 		// border-top-color: $black;
 		// border-top-width: 5px;
 
-		&:hover {
-			color: $black;
-			background: $yellow;
-			font-weight: 300;
-			border-top-color: $black;
-		}
+		// &:hover {
+		// 	color: $black;
+		// 	background: $yellow;
+		// 	font-weight: 300;
+		// 	border-top-color: $black;
+		// }
 	}
 
 	.ad-biography {
@@ -453,7 +458,7 @@ html {
 	}
 }
 
-.mc-content-wrapper-mobile, .mc-navigation-mobile {
+.mc-content-wrapper-mobile, .mc-navigation-mobile, .copyright.mobile {
 	display: none;
 }
 
