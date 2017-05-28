@@ -81,7 +81,8 @@ class ArtistDetail extends Component {
 						</a>
 						<div className="ad-logo-container col-xs-10">
 							<Link key={'/'} href={'/'}>
-								<img className="ad-logo" src="/images/interline-logo.svg" alt="#"/>
+								<object type="image/svg+xml" className="ad-logo" data="/images/interline-logo.svg" alt="#">
+								</object>
 							</Link>
 						</div>
 						<div className="col-xs-1 ad-right"></div>
