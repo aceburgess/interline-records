@@ -108,8 +108,11 @@ class Main extends Component {
     			</Fragment>
     		)
 	    default:
+	    	push('/');
 	      return (
-					<h1>Under Construction</h1>
+					<Fragment forRoute='/'>
+			  		<MainContent {...this.props} mailingList={this.mailingList} checkIfLoaded={checkIfLoaded} loadingScreen={loadingScreen} selectedSection="artist-list" />
+					</Fragment>
 	      )
     }
 	}
