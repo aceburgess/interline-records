@@ -117,7 +117,7 @@ class MainContent extends Component {
 							<div className="mc-content-wrapper-mobile">
 								<ContentSection contact={this.openContact} general={general} selectedSection={selectedSection} selectArtist={selectArtist} artists={artists} />
 							</div>
-							<p className='copyright mobile' >&copy; {new Date().getFullYear()} Interline Group, LLC</p>
+							<p className='copyright mobile' >&copy; {new Date().getFullYear()} Interline Records</p>
 						</div>
 						<div className="col-md-2"></div>
 					</div>
